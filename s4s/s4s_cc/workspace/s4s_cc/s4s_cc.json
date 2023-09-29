@@ -1,0 +1,99 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-11-03 00:06:12.664862",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "S4S CC",
+ "links": [],
+ "modified": "2023-07-05 13:56:35.821118",
+ "modified_by": "Administrator",
+ "module": "S4S CC",
+ "name": "S4S CC",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Supplier",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "FPO Purchase Order",
+   "link_to": "FPO Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "GRN",
+   "link_to": "Purchase Receipt",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM RM Material Request",
+   "link_to": "DCM Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pick List",
+   "link_to": "Pick List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Material Transfer / In WH To WH",
+   "link_to": "Material Transfer WH To WH",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "RM/SFG Transfer To WIP",
+   "link_to": "SFG Transfer To WIP",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "SFG Transfer WIP To FG",
+   "link_to": "SFG Transfer WIP to FG",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "S4S CC"
+}

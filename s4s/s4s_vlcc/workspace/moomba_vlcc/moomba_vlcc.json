@@ -1,0 +1,63 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-09-18 11:06:05.712281",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Moomba VLCC",
+ "links": [],
+ "modified": "2023-09-20 15:16:17.527741",
+ "modified_by": "Administrator",
+ "module": "S4S VLCC",
+ "name": "Moomba VLCC",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Add & See Supplier",
+   "link_to": "S4S Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "See Approved Supplier ",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Add & See Farmer Query",
+   "link_to": "S4S Farmer Query",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "See Transactions",
+   "link_to": "S4S Purchase",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Delivery Challan",
+   "link_to": "RM Transfer VLCC To CC",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Price List",
+   "link_to": "S4S Price List",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Moomba VLCC"
+}

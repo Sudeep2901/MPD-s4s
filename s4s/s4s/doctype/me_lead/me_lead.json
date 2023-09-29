@@ -1,0 +1,627 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-07-29 21:51:50.066840",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lead_type_section",
+  "lead_type",
+  "column_break_3",
+  "lead_approval_status",
+  "lead_details_section",
+  "naming_series",
+  "lead_name",
+  "gender",
+  "column_break_4",
+  "lead_owner",
+  "lead_date",
+  "status",
+  "address_contact_section",
+  "address_type",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "column_break_17",
+  "country",
+  "pincode",
+  "mobile_no",
+  "whats_app_no",
+  "area_of_visit_section",
+  "dist",
+  "taluka_name",
+  "village_name",
+  "column_break_14",
+  "s4s_cc",
+  "latitude",
+  "longitude",
+  "source_of_lead_section",
+  "source_of_lead",
+  "column_break_32",
+  "source_name",
+  "group_information_section",
+  "group_lead_name",
+  "group_size",
+  "column_break_20",
+  "group_name",
+  "kyc_of_me_section",
+  "aadhar_card",
+  "pan_card",
+  "address_proof",
+  "bank_passbook",
+  "column_break_26",
+  "ration_card",
+  "voters_id",
+  "light_bill",
+  "data_for_selection_section",
+  "space_for_processing",
+  "photo_of_space",
+  "photo_of_space_2",
+  "photo_of_space_3",
+  "column_break_35",
+  "light_availability",
+  "water_availability",
+  "ease_of_transportation",
+  "banking_readiness_section",
+  "ok_to_take_loan",
+  "taken_a_loan",
+  "column_break_41",
+  "defaulted_on_the_loan",
+  "recommendation_section",
+  "me_is_interested",
+  "follow_up_me",
+  "recommend_the_me",
+  "column_break_45",
+  "followup_by",
+  "next_contact_by",
+  "next_contact_date",
+  "notes_section",
+  "notes",
+  "audio_feedback_section",
+  "audio_feedback",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "lead_details_section",
+   "fieldtype": "Section Break",
+   "label": "2. Lead Details (\u0907\u091a\u094d\u091b\u0941\u0915\u093e\u091a\u0940 \u092e\u093e\u0939\u093f\u0924\u0940)"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series (\u092a\u094d\u0930\u0915\u093e\u0930)",
+   "options": "ME LEAD.-"
+  },
+  {
+   "fieldname": "lead_owner",
+   "fieldtype": "Link",
+   "label": " Lead Owner (\u0907\u091a\u094d\u091b\u0941\u0915\u093e\u0938\u093e\u0920\u0940 \u091c\u092c\u093e\u092c\u0926\u093e\u0930)",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "lead_date",
+   "fieldtype": "Date",
+   "label": "Lead Generation Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Lead/\u0907\u091a\u094d\u091b\u0941\u0915",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Lead Status ( \u0907\u091a\u094d\u091b\u0941\u0915\u093e\u091a\u0940 \u0938\u0927\u094d\u092f\u0938\u094d\u0925\u093f\u0924\u0940)",
+   "options": "\nLead/\u0907\u091a\u094d\u091b\u0941\u0915\nOpen\nUnder Follow Up/\u091a\u0930\u094d\u091a\u093e \u091a\u093e\u0932\u0942 \u0906\u0939\u0947\nPending Review/\u092a\u0930\u0940\u0915\u094d\u0937\u0923 \u092c\u093e\u0915\u0940 \u0906\u0939\u0947\nHold/\u0928\u093f\u0930\u094d\u0923\u092f \u092c\u093e\u0915\u0940 \u0906\u0939\u0947\nCompleted/\u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u092a\u0942\u0930\u094d\u0923"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender (\u0932\u093f\u0902\u0917)",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lead Name (\u0907\u091a\u094d\u091b\u0941\u0915\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "lead_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Lead Type (\u0907\u091a\u094d\u091b\u0941\u0915 \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u094d\u092f\u093e\u0902\u091a\u0947 \u092a\u094d\u0930\u0915\u093e\u0930)",
+   "options": "\nDCM Lead/\u0907\u091a\u094d\u091b\u0941\u0915 DCM \u0917\u091f\nDCM Member/\u0907\u091a\u094d\u091b\u0941\u0915 DCM \u0938\u0926\u0938\u094d\u092f\nME/\u090f\u0915\u0932 \u0938\u0926\u0938\u094d\u092f",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "lead_type_section",
+   "fieldtype": "Section Break",
+   "label": "1. Lead Type (\u0907\u091a\u094d\u091b\u0941\u0915 \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u094d\u092f\u093e\u0902\u091a\u0947 \u092a\u094d\u0930\u0915\u093e\u0930)"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "area_of_visit_section",
+   "fieldtype": "Section Break",
+   "label": "4. Area of The Visit (\u0938\u0930\u094d\u0935\u0947\u0915\u094d\u0937\u0923\u093e\u091a\u0947 \u0920\u093f\u0915\u093e\u0923)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "s4s_cc",
+   "fieldtype": "Link",
+   "label": "S4S CC",
+   "options": "S4S CC List"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "group_information_section",
+   "fieldtype": "Section Break",
+   "label": "6. Group Information (\u0917\u091f\u093e\u091a\u0940 \u092e\u093e\u0939\u093f\u0924\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "group_lead_name",
+   "fieldtype": "Data",
+   "label": "Group Lead (Potential) Name (\u0917\u091f \u092a\u094d\u0930\u092e\u0941\u0916\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "group_name",
+   "fieldtype": "Link",
+   "label": "Group Name (\u0917\u091f\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "options": "S4S Group Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "kyc_of_me_section",
+   "fieldtype": "Section Break",
+   "label": "7. KYC Status of ME (\u0906\u0935\u0936\u094d\u092f\u0915 \u0915\u093e\u0917\u0926\u092a\u0924\u094d\u0930\u0947)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aadhar_card",
+   "fieldtype": "Select",
+   "label": "Aadhar Card (\u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pan_card",
+   "fieldtype": "Select",
+   "label": "PAN Card (PAN \u0915\u093e\u0930\u094d\u0921)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address_proof",
+   "fieldtype": "Select",
+   "label": "Address Proof (\u092a\u0924\u094d\u0924\u094d\u092f\u093e\u091a\u093e \u092a\u0941\u0930\u093e\u0935\u093e)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ration_card",
+   "fieldtype": "Select",
+   "label": "Ration Card (\u0930\u0947\u0936\u0928 \u0915\u093e\u0930\u094d\u0921)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "voters_id",
+   "fieldtype": "Select",
+   "label": "Voters ID (\u092e\u0924\u0926\u093e\u0928 \u0915\u093e\u0930\u094d\u0921)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "light_bill",
+   "fieldtype": "Select",
+   "label": "Light Bill (\u0932\u093e\u0908\u091f \u092c\u093f\u0932)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bank_passbook",
+   "fieldtype": "Select",
+   "label": "Bank Passbook (\u092c\u0901\u0915 \u092a\u093e\u0938\u092c\u0941\u0915)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "data_for_selection_section",
+   "fieldtype": "Section Break",
+   "label": "8. Preliminary Data for Selections (DCM \u0928\u093f\u0935\u0921\u0940\u0938\u093e\u0920\u0940 \u092a\u094d\u0930\u093e\u0925\u092e\u093f\u0915 \u092e\u093e\u0939\u093f\u0924\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "space_for_processing",
+   "fieldtype": "Select",
+   "label": "Do you have a space for processing? (\u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u0947\u0938\u093e\u0920\u0940 \u091c\u093e\u0917\u0947\u091a\u0940 \u0909\u092a\u0932\u092c\u094d\u0927\u0924\u093e \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nOwn/\u0938\u094d\u0935\u0924\u0903\u091a\u0940 \u091c\u093e\u0917\u093e\nRented/\u092d\u093e\u0921\u094d\u092f\u093e\u091a\u0940 \u091c\u093e\u0917\u093e\nWith Lead/\u0917\u091f\u093e\u091a\u0940 \u091c\u093e\u0917\u093e"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "photo_of_space",
+   "fieldtype": "Attach Image",
+   "label": "Photo of Space-1 (\u091c\u093e\u0917\u0947\u091a\u093e \u092b\u094b\u091f\u094b-1)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "light_availability",
+   "fieldtype": "Select",
+   "label": "Light Availability (\u0935\u093f\u091c\u0947\u091a\u0940 \u0909\u092a\u0932\u092c\u094d\u0927\u0924\u093e)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "water_availability",
+   "fieldtype": "Select",
+   "label": "Water Availability (\u092a\u093e\u0923\u094d\u092f\u093e\u091a\u0940 \u0909\u092a\u0932\u092c\u094d\u0927\u0924\u093e)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ease_of_transportation",
+   "fieldtype": "Select",
+   "label": "Ease of Transportation (\u0935\u093e\u0939\u0924\u0941\u0915\u0940\u091a\u0940 \u0938\u0941\u0935\u093f\u0927\u093e)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "banking_readiness_section",
+   "fieldtype": "Section Break",
+   "label": "9. Banking Readiness (\u092c\u0901\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u0947\u0938\u093e\u0920\u0940 \u0924\u092f\u093e\u0930\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ok_to_take_loan",
+   "fieldtype": "Select",
+   "label": "Are you ok to take the loan? (\u092c\u0901\u0915\u0947\u091a\u0947 \u0915\u0930\u094d\u091c \u0918\u0947\u0923\u094d\u092f\u093e\u091a\u0940 \u0924\u092f\u093e\u0930\u0940 \u0906\u0939\u0947 \u0915\u093e? )",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "taken_a_loan",
+   "fieldtype": "Select",
+   "label": "Have you taken a loan before? (\u092f\u093e \u092a\u0942\u0930\u094d\u0935\u0940 \u0915\u0941\u0920\u0932\u0947 \u0915\u0930\u094d\u091c \u0918\u0947\u0924\u0932\u0947 \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "defaulted_on_the_loan",
+   "fieldtype": "Select",
+   "label": "Have you defaulted on the loan anytime? (\u0906\u0927\u0940\u091a\u0947 \u0915\u0941\u0920\u0932\u0947 \u0915\u0930\u094d\u091c \u0925\u0915\u0940\u0924 \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "recommendation_section",
+   "fieldtype": "Section Break",
+   "label": "10. Recommendation & Follow Up ( \u0936\u093f\u092b\u093e\u0930\u0938 \u0906\u0923\u093f \u092a\u093e\u0920\u092a\u0941\u0930\u093e\u0935\u093e)"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "next_contact_by",
+   "fieldtype": "Data",
+   "label": "Next Contact By (\u092a\u0941\u0922\u0940\u0932 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0923\u093e\u0930\u0940 \u0935\u094d\u092f\u0915\u094d\u0924\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "next_contact_date",
+   "fieldtype": "Date",
+   "label": "Next Contact Date (\u092a\u0941\u0922\u0940\u0932 \u0938\u0902\u092a\u0930\u094d\u0915\u093e\u091a\u0940 \u0924\u093e\u0930\u0940\u0916 )"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "11. Notes (\u091f\u093f\u092a\u094d\u092a\u0923\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes (\u091f\u093f\u092a\u094d\u092a\u0923\u0940)"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "address_contact_section",
+   "fieldtype": "Section Break",
+   "label": "3. Address & Contact (\u092a\u0924\u094d\u0924\u093e \u0906\u0923\u093f \u0938\u0902\u092a\u0930\u094d\u0915\u093e\u091a\u0940 \u092e\u093e\u0939\u093f\u0924\u0940)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address_type",
+   "fieldtype": "Select",
+   "label": "Address Type (\u092a\u0924\u094d\u0924\u094d\u092f\u093e\u091a\u093e \u092a\u094d\u0930\u0915\u093e\u0930)",
+   "options": "\nBilling/\u092c\u093f\u0932\u093e\u0938\u093e\u0920\u0940\nOffice/\u0911\u092b\u093f\u0938\nPersonal/\u0935\u0948\u092f\u0915\u094d\u0924\u093f\u0915\nPlant/\u092a\u094d\u0932\u093e\u0902\u091f\nPostal/\u092a\u094b\u0938\u094d\u091f\u0932\nShop/\u0926\u0941\u0915\u093e\u0928\nWarehouse/\u0917\u094b\u0926\u093e\u092e\nCurrent/\u0938\u0927\u094d\u092f\u093e\u091a\u093e \u092a\u0924\u094d\u0924\u093e\nPermanent/\u0915\u093e\u092f\u092e\u091a\u093e \u092a\u0924\u094d\u0924\u093e"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State (\u0930\u093e\u091c\u094d\u092f)",
+   "options": "S4S State"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country (\u0926\u0947\u0936)",
+   "options": "Country"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pin code (\u092a\u093f\u0928 \u0915\u094b\u0921)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No (\u092e\u094b\u092c\u093e\u0908\u0932 \u0915\u094d\u0930.)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "whats_app_no",
+   "fieldtype": "Data",
+   "label": "WhatsApp No (\u092e\u094b\u092c\u093e\u0908\u0932 \u0915\u094d\u0930.)"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dist",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "taluka_name",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "village_name",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "source_of_lead_section",
+   "fieldtype": "Section Break",
+   "label": "5. Source of the Lead (\u0907\u091a\u094d\u091b\u0941\u0915\u093e\u091a\u093e \u0938\u0902\u0926\u0930\u094d\u092d)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "source_of_lead",
+   "fieldtype": "Select",
+   "label": "Source of the Lead (\u0907\u091a\u094d\u091b\u0941\u0915\u093e\u091a\u093e \u0938\u0902\u0926\u0930\u094d\u092d)",
+   "options": "\nExisting DCM/\u091a\u093e\u0932\u0942 DCM\nVLCC\nLocal ICRP/\u092c\u091a\u0924 \u0917\u091f \u0938\u0926\u0938\u094d\u092f\nFPO Name\nPeers/Potential Lead from the same village/\u090f\u0915\u093e\u091a \u0917\u093e\u0935\u093e\u0924\u0940\u0932 \u092a\u0930\u093f\u091a\u093f\u0924\nOthers/\u0907\u0924\u0930"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "source_name",
+   "fieldtype": "Data",
+   "label": "Source Lead Name (\u0938\u0902\u0926\u0930\u094d\u092d \u0926\u0947\u0923\u093e\u0931\u094d\u092f\u093e \u0935\u094d\u092f\u0915\u094d\u0924\u0940\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "audio_feedback_section",
+   "fieldtype": "Section Break",
+   "label": "12. Audio Feedback (\u0927\u094d\u0935\u0928\u0940 \u0905\u092d\u093f\u092a\u094d\u0930\u093e\u092f)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "audio_feedback",
+   "fieldtype": "Attach",
+   "label": "Attach Audio Feedback (\u0927\u094d\u0935\u0928\u0940 \u0905\u092d\u093f\u092a\u094d\u0930\u093e\u092f \u0938\u0902\u0932\u0917\u094d\u0928 \u0915\u0930\u093e)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "photo_of_space_2",
+   "fieldtype": "Attach Image",
+   "label": "Photo of Space-2 (\u091c\u093e\u0917\u0947\u091a\u093e \u092b\u094b\u091f\u094b-2)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "photo_of_space_3",
+   "fieldtype": "Attach Image",
+   "label": "Photo of Space-3 (\u091c\u093e\u0917\u0947\u091a\u093e \u092b\u094b\u091f\u094b-3)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "group_size",
+   "fieldtype": "Data",
+   "label": "Group Size (\u0917\u091f \u0938\u0926\u0938\u094d\u092f \u0938\u0902\u0916\u094d\u092f\u093e)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "me_is_interested",
+   "fieldtype": "Select",
+   "label": "Micro Entrepreneur is interested? (ME \u0907\u091a\u094d\u091b\u0941\u0915 \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940\nConfused/\u0926\u094d\u0935\u093f\u0927\u093e \u092e\u0928\u0938\u094d\u0925\u093f\u0924\u0940\nStill Evaluating"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "follow_up_me",
+   "fieldtype": "Select",
+   "label": "Do we need to follow up with Micro Entrepreneur? (\u0907\u091a\u094d\u091b\u0941\u0915 ME \u0936\u0940 \u092a\u093e\u0920\u092a\u0941\u0930\u093e\u0935\u093e \u0915\u0930\u0923\u0947 \u0906\u0935\u0936\u094d\u092f\u0915 \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "recommend_the_me",
+   "fieldtype": "Select",
+   "label": "Do you recommend the Micro Entrepreneur? (\u0907\u091a\u094d\u091b\u0941\u0915 ME \u0915\u093e\u092e \u0915\u0930\u0923\u094d\u092f\u093e\u0938 \u092f\u094b\u0917\u094d\u092f \u0906\u0939\u0947 \u0915\u093e?)",
+   "options": "\nYes/\u0939\u094b\nNo/\u0928\u093e\u0939\u0940"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "followup_by",
+   "fieldtype": "Select",
+   "label": "Follow Up By (\u092a\u093e\u0920\u092a\u0941\u0930\u093e\u0935\u093e \u0915\u094b\u0923 \u0915\u0930\u0923\u093e\u0930?)",
+   "options": "\nSelf/\u0938\u094d\u0935\u0924\u0903\nOther/\u0938\u094d\u0924\u0930"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ME Lead",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "lead_approval_status",
+   "fieldtype": "Select",
+   "label": "Lead Approval Status",
+   "options": "\nSend to Approval\nRejected by Lead User\nApproved by Qualifier\nRejected by Qualifier\nQualify\nReject\nRework"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Lead Qualification Form",
+   "link_doctype": "Lead Qualification Form",
+   "link_fieldname": "me_lead"
+  }
+ ],
+ "modified": "2022-09-12 16:32:05.161232",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "ME Lead",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "lead_name,lead_owner,status",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

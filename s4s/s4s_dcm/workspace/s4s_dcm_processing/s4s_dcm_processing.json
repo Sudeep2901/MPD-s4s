@@ -1,0 +1,81 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-11-30 10:33:23.247378",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "S4S DCM Processing",
+ "links": [],
+ "modified": "2023-07-20 10:30:31.978343",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "S4S DCM Processing",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "DCM Inventory Dashboard",
+   "link_to": "dcm-inventory-dashbo",
+   "type": "Page"
+  },
+  {
+   "doc_view": "",
+   "label": "DCM Overview Dashboard",
+   "link_to": "dcm-dashboard",
+   "type": "Page"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM RM Material Request",
+   "link_to": "DCM Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "See Material Receipt",
+   "link_to": "Stock Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM Daily Checklist",
+   "link_to": "DCM Daily Checklist",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "SFG Processing Data Page",
+   "link_to": "SFG Data Processing",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "SFG Dispatch Request",
+   "link_to": "SFG Dispatch Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM Maintenance Request",
+   "link_to": "Maintenance Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM Hardware Request",
+   "link_to": "Hardware Request",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "S4S DCM Processing"
+}

@@ -1,0 +1,105 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-09-20 14:42:18.375815",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Moomba CC",
+ "links": [],
+ "modified": "2023-09-20 15:16:47.113701",
+ "modified_by": "Administrator",
+ "module": "FPO CC",
+ "name": "Moomba CC",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Add & See Supplier",
+   "link_to": "S4S Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "See Approve Supplier",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Add & See Farmer Query",
+   "link_to": "S4S Farmer Query",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "See & Approve Transactions",
+   "link_to": "S4S Purchase",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Inward VLCC Dispatches",
+   "link_to": "RM Transfer VLCC To CC",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Price List",
+   "link_to": "S4S Price List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pick List",
+   "link_to": "Pick List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Proforma Invoice",
+   "link_to": "Proforma Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Farmer Transaction UTR Details",
+   "link_to": "Farmer Transaction UTR Details",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Moomba CC"
+}

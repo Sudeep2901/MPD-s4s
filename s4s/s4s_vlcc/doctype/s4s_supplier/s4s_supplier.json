@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-07 09:43:13.416975",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "type_of_supplier",
+  "company",
+  "abbr",
+  "supplier_name",
+  "mobile_no",
+  "gender",
+  "aadhar_card_no",
+  "pan_no",
+  "column_break_5",
+  "vlcc_name",
+  "cc_name",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "approval_status",
+  "bank_details_section",
+  "pan_card_photo",
+  "aadhar_card_photo",
+  "bank_passbook_photo",
+  "account_holder_name",
+  "column_break_18",
+  "account_number",
+  "bank_name",
+  "ifsc_code",
+  "branch",
+  "section_break_23",
+  "supplier",
+  "create_supplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series (\u092e\u093e\u0932\u093f\u0915\u093e)",
+   "options": "FARM-.YY.-.#####"
+  },
+  {
+   "fieldname": "type_of_supplier",
+   "fieldtype": "Select",
+   "label": "Type of Supplier (\u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930\u093e\u091a\u093e \u092a\u094d\u0930\u0915\u093e\u0930)",
+   "options": "Farmer"
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farmer Name (\u0936\u0947\u0924\u0915\u0931\u094d\u092f\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Mobile No (\u092e\u094b\u092c\u093e\u0908\u0932 \u0915\u094d\u0930.)",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "aadhar_card_no",
+   "fieldtype": "Data",
+   "label": "Aadhar Card No (\u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 \u0915\u094d\u0930.)"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "PAN No (\u092a\u0945\u0928 \u0915\u094d\u0930.)"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "label": "VLCC Name (VLCC \u0928\u093e\u0935)",
+   "options": "S4S VLCC List"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "label": "CC Name (CC \u0928\u093e\u0935)",
+   "options": "S4S CC List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "bank_details_section",
+   "fieldtype": "Section Break",
+   "label": "Farmer Bank Details (\u0936\u0947\u0924\u0915\u0931\u094d\u092f\u093e\u091a\u0947 \u092c\u0901\u0915 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "fieldname": "pan_card_photo",
+   "fieldtype": "Attach Image",
+   "label": "PAN Card Photo (\u092a\u0945\u0928 \u0915\u093e\u0930\u094d\u0921 \u092b\u094b\u091f\u094b)"
+  },
+  {
+   "fieldname": "aadhar_card_photo",
+   "fieldtype": "Attach Image",
+   "label": "Aadhar Card Photo (\u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 \u092b\u094b\u091f\u094b)"
+  },
+  {
+   "fieldname": "bank_passbook_photo",
+   "fieldtype": "Attach Image",
+   "label": "Bank Passbook Photo (\u092c\u0901\u0915 \u092a\u093e\u0938\u092c\u0941\u0915 \u092b\u094b\u091f\u094b)"
+  },
+  {
+   "fieldname": "account_holder_name",
+   "fieldtype": "Data",
+   "label": "Account Holder Name (\u0916\u093e\u0924\u0947\u0927\u093e\u0930\u0915\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number (\u0916\u093e\u0924\u0947 \u0915\u094d\u0930\u092e\u093e\u0902\u0915)"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "label": "Bank Name (\u092c\u0901\u0915\u0947\u091a\u0947 \u0928\u093e\u0935)",
+   "options": "S4S Bank List"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code (IFSC \u0915\u094b\u0921)"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch (\u0936\u093e\u0916\u093e)",
+   "options": "Bank Branch"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.account_number && doc.account_holder_name && doc.bank_name && doc.ifsc_code && doc.branch && !doc.supplier",
+   "fieldname": "create_supplier",
+   "fieldtype": "HTML",
+   "options": "<div style=\"text-align: right;\">\n<button class=\"btn btn-default ellipsis btn-primary\" id=\"create_supplier\">Create Approved Supplier\n</button></div>"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Approved Supplier Name (\u092e\u0902\u091c\u0942\u0930 \u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State (\u0930\u093e\u091c\u094d\u092f)",
+   "options": "S4S State"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender (\u0932\u093f\u0902\u0917)",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company (\u0915\u0902\u092a\u0928\u0940)",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "no_copy": 1,
+   "options": "Pending\nApproved",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-27 12:38:30.556369",
+ "modified_by": "Administrator",
+ "module": "S4S VLCC",
+ "name": "S4S Supplier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "VLCC User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "supplier_name,mobile_no,aadhar_card_no,pan_no",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:user_id",
+ "creation": "2022-10-31 14:49:47.149525",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "company",
+  "username",
+  "vlcc_name",
+  "cc_name",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "inward_warehouse",
+  "transit_warehouse",
+  "column_break_5",
+  "onboarding_date",
+  "adhar_no",
+  "pan_no",
+  "bank_details_section",
+  "pan_card_photo",
+  "aadhar_card_photo",
+  "bank_passbook_photo",
+  "account_holder_name",
+  "column_break_18",
+  "account_number",
+  "bank_name",
+  "ifsc_code",
+  "branch",
+  "section_break_o3civ",
+  "assign_cc",
+  "column_break_ope3m",
+  "assign_vlcc"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "user_id.full_name",
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "label": "VLCC Name",
+   "options": "S4S VLCC List"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "label": "CC Name",
+   "options": "S4S CC List"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "S4S Village List"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "S4S District List"
+  },
+  {
+   "fieldname": "inward_warehouse",
+   "fieldtype": "Link",
+   "label": "Inward Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "transit_warehouse",
+   "fieldtype": "Link",
+   "label": "Transit Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "S4S State"
+  },
+  {
+   "fieldname": "bank_details_section",
+   "fieldtype": "Section Break",
+   "label": "User Bank Details"
+  },
+  {
+   "fieldname": "account_holder_name",
+   "fieldtype": "Data",
+   "label": "Account Holder Name"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "label": "Bank Name",
+   "options": "S4S Bank List"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "bank_passbook_photo",
+   "fieldtype": "Attach Image",
+   "label": "Bank Passbook Photo"
+  },
+  {
+   "fieldname": "aadhar_card_photo",
+   "fieldtype": "Attach Image",
+   "label": "Aadhar Card Photo"
+  },
+  {
+   "fieldname": "pan_card_photo",
+   "fieldtype": "Attach Image",
+   "label": "PAN Card Photo"
+  },
+  {
+   "fieldname": "section_break_o3civ",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assign_cc",
+   "fieldtype": "Table",
+   "label": "Assign CC",
+   "options": "Assign CC"
+  },
+  {
+   "fieldname": "column_break_ope3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assign_vlcc",
+   "fieldtype": "Table",
+   "label": "Assign VLCC",
+   "options": "Assign VLCC"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "onboarding_date",
+   "fieldtype": "Date",
+   "label": "Onboarding Date"
+  },
+  {
+   "fieldname": "adhar_no",
+   "fieldtype": "Data",
+   "label": "Aadhar No"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "Pan No"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-18 16:14:24.154063",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "S4S User details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-05-25 10:21:51.100607",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "subcontracting_supplier",
+  "subcontracting_supplier_name",
+  "column_break_3zyh8",
+  "date",
+  "edit_date",
+  "company",
+  "abbr",
+  "dcm_sfg_transfer_to_wip",
+  "section_break_p0tyf",
+  "wip_warehouse",
+  "column_break_kukiv",
+  "fg_warehouse",
+  "section_break_0edbd",
+  "items",
+  "section_break_85zkg",
+  "fg_items_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SUB.-.WIP.-.FG.-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Manufacture",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3zyh8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only_depends_on": "eval:doc.edit_date == 0"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_date",
+   "fieldtype": "Check",
+   "label": "Edit Date"
+  },
+  {
+   "fieldname": "dcm_sfg_transfer_to_wip",
+   "fieldtype": "Link",
+   "label": "Material Transfer For Subcontractor",
+   "options": "Material Transfer for Subcontractor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_p0tyf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "WIP Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_kukiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fg_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "FG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "section_break_0edbd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "WIP Items",
+   "options": "RM Item Details"
+  },
+  {
+   "fieldname": "section_break_85zkg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fg_items_table",
+   "fieldtype": "Table",
+   "label": "FG Items",
+   "options": "FG Items Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material Return From Subcontractor",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "subcontracting_supplier",
+   "fieldtype": "Link",
+   "label": "Subcontracting Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "subcontracting_supplier.supplier_name",
+   "fieldname": "subcontracting_supplier_name",
+   "fieldtype": "Data",
+   "label": "Subcontracting Supplier Name"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "material_return_from_subcontractor"
+  }
+ ],
+ "modified": "2023-07-20 16:35:56.492173",
+ "modified_by": "Administrator",
+ "module": "S4S Warehouse",
+ "name": "Material Return From Subcontractor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

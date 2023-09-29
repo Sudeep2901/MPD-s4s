@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-22 09:24:46.522849",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "qty",
+  "no_of_bags",
+  "uom",
+  "batch",
+  "bag_condition",
+  "moisture",
+  "colour",
+  "taste",
+  "odour",
+  "size",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_bags",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No of Bags",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "bag_condition",
+   "fieldtype": "Select",
+   "label": "Bag Condition",
+   "options": "\nDry\nWetted\nFungus"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "label": "Moisture"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Select",
+   "label": "Colour",
+   "options": "\nGrade A\nGrade B\nGrade C"
+  },
+  {
+   "fieldname": "taste",
+   "fieldtype": "Select",
+   "label": "Taste",
+   "options": "\nGrade A\nGrade B\nGrade C"
+  },
+  {
+   "fieldname": "odour",
+   "fieldtype": "Select",
+   "label": "Odour",
+   "options": "\nGrade A\nGrade B\nGrade C"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Select",
+   "label": "Size",
+   "options": "\nGrade A\nGrade B\nGrade C"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-22 09:24:46.522849",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "RM Return Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

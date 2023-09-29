@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-04-27 14:55:14.871223",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "column_break_zawn5",
+  "date",
+  "edit_posting_date",
+  "section_break_ik5c9",
+  "rm_warehouse",
+  "column_break_xsh1i",
+  "wip_warehouse",
+  "section_break_x2fxf",
+  "rm_item_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DCM-SFG-PR-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Material Transfer For Manufacture",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zawn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_posting_date",
+   "fieldtype": "Check",
+   "label": "Edit Posting Date"
+  },
+  {
+   "fieldname": "section_break_ik5c9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "label": "RM Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_xsh1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "label": "WIP Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "section_break_x2fxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_item_details",
+   "fieldtype": "Table",
+   "label": "RM Item Details",
+   "options": "RM Item Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DCM SFG Transfer to WIP",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "dcm_sfg_transfer_to_wip"
+  },
+  {
+   "link_doctype": "SFG Transfer WIP to FG",
+   "link_fieldname": "dcm_sfg_transfer_to_wip"
+  }
+ ],
+ "modified": "2023-04-28 12:38:29.779926",
+ "modified_by": "Administrator",
+ "module": "S4S Warehouse",
+ "name": "DCM SFG Transfer to WIP",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

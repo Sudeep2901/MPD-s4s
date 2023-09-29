@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-07 11:50:26.117826",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goni_no",
+  "weight_in_kg",
+  "moisture",
+  "column_break_4",
+  "colour",
+  "flake_size",
+  "quality",
+  "overall"
+ ],
+ "fields": [
+  {
+   "fieldname": "goni_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Goni No",
+   "options": "S4S Goni No"
+  },
+  {
+   "fieldname": "weight_in_kg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight In Kg"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Moisture %"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Select",
+   "label": "Colour",
+   "options": "\nGood\nAverage\nPoor"
+  },
+  {
+   "fieldname": "flake_size",
+   "fieldtype": "Select",
+   "label": "Flake size",
+   "options": "\nGood\nAverage\nPoor"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Select",
+   "label": "Quality",
+   "options": "\nDried\nSweating"
+  },
+  {
+   "fieldname": "overall",
+   "fieldtype": "Select",
+   "label": "Overall",
+   "options": "\nAccept\nRework"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-12 12:13:00.320651",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "ME Goni Weight",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

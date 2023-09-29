@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "creation": "2023-02-21 16:19:18.534472",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_sid",
+  "enabled",
+  "column_break_3",
+  "auth_token",
+  "section_break_6",
+  "api_key",
+  "api_secret",
+  "column_break_9",
+  "twiml_sid",
+  "messaging_service_sid",
+  "section_break_qvoys",
+  "url",
+  "column_break_xvjcf",
+  "api_key_2f"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_sid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Account SID"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Password",
+   "hidden": 1,
+   "label": "Auth Token"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "twiml_sid",
+   "fieldtype": "Data",
+   "label": "TwiML SID",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "messaging_service_sid",
+   "fieldtype": "Data",
+   "label": "Messaging Service SID"
+  },
+  {
+   "fieldname": "section_break_qvoys",
+   "fieldtype": "Section Break",
+   "label": "2Factor API Settings"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL",
+   "mandatory_depends_on": "eval: doc.enabled"
+  },
+  {
+   "fieldname": "column_break_xvjcf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_key_2f",
+   "fieldtype": "Data",
+   "label": "API Key 2f",
+   "mandatory_depends_on": "eval: doc.enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-04-21 16:38:23.853624",
+ "modified_by": "Administrator",
+ "module": "S4S Twilio Integration",
+ "name": "S4S Twilio Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

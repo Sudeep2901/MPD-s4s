@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-30 11:43:07.801907",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "request_type",
+  "column_break_3",
+  "approval_status",
+  "dcm_supervisor",
+  "cc_user",
+  "logistic_supervisor",
+  "s4s_logistic_manager",
+  "request_date",
+  "company",
+  "abbr",
+  "delivery_date",
+  "purpose",
+  "warehouse_section",
+  "dcm_warehouse",
+  "column_break_11",
+  "rm_warehouse",
+  "item_details_section",
+  "items",
+  "section_break_14",
+  "material_request",
+  "column_break_16",
+  "amended_from",
+  "logistic_details_section",
+  "trip_start",
+  "trip_end",
+  "vehicle_no",
+  "vehicle_model",
+  "driver_name",
+  "driver_mobile_number",
+  "column_break_23",
+  "assigned_vehicle",
+  "scheduling_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DCM MR.-"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "options": "\nRM Request\nPM Request"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Purpose",
+   "options": "Material Transfer"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DCM Material Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "S4S DCM Material request"
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Target Delivery Date"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "DCM Warehouse Details"
+  },
+  {
+   "fieldname": "dcm_warehouse",
+   "fieldtype": "Link",
+   "label": "DCM Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "DCM Name",
+   "options": "DCM List"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "material_request",
+   "fieldtype": "Link",
+   "label": "Material Request",
+   "options": "Material Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "dcm_name.location",
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CC Warehouse",
+   "options": "Warehouse",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_start",
+   "fieldtype": "Check",
+   "label": "TRIP START",
+   "permlevel": 2
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_end",
+   "fieldtype": "Check",
+   "label": "TRIP END",
+   "permlevel": 3
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "logistic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Logistic Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "assigned_vehicle",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Assigned Vehicle",
+   "options": "\nYes\nNo",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scheduling_date",
+   "fieldtype": "Date",
+   "label": "Scheduling Date",
+   "permlevel": 3
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "\nApprove by DCM Supervisor\nReject by DCM Supervisor\nAccept by CC Supervisor\nReject by CC Supervisor\nAccept by Logistic Supervisor\nClose Request",
+   "read_only_depends_on": "eval:doc.trip_end || doc.approval_status === \"Close Request\"\neval:frappe.user.has_role(\"DCM Supervisor\") && doc.dcm_supervisor ===1"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "dcm_supervisor",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "DCM Supervisor"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "cc_user",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "CC User"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "logistic_supervisor",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Logistic Supervisor"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "s4s_logistic_manager",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "S4S Logistic Manager"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "dcm_material_request"
+  }
+ ],
+ "modified": "2023-07-20 15:05:13.195465",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "DCM Material Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

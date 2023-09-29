@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-09 16:36:16.112149",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fg_warehouse",
+  "item_code",
+  "item_name",
+  "qty",
+  "uom",
+  "column_break_xbofx",
+  "is_finished_item",
+  "is_scrap_item",
+  "is_process_loss"
+ ],
+ "fields": [
+  {
+   "fieldname": "fg_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "FG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_finished_item",
+   "fieldtype": "Check",
+   "label": "Is Finished Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_scrap_item",
+   "fieldtype": "Check",
+   "label": "Is Scrap Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_process_loss",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Process Loss"
+  },
+  {
+   "fieldname": "column_break_xbofx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-23 17:10:26.307960",
+ "modified_by": "Administrator",
+ "module": "S4S Factory",
+ "name": "FG Items Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

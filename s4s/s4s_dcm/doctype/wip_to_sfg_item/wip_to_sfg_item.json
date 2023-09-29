@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-23 22:23:41.174540",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "sfg_product",
+  "column_break_3",
+  "qty",
+  "uom",
+  "finish_batch",
+  "finish_for_qty",
+  "batch_no",
+  "section_break_8",
+  "moisture",
+  "colour",
+  "flake_size",
+  "section_break_12",
+  "quality",
+  "overall",
+  "section_break_14",
+  "custom_save",
+  "stock_entry",
+  "column_break_17",
+  "custom_submit",
+  "se_submitted"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sfg_product",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SFG Product",
+   "options": "Item"
+  },
+  {
+   "bold": 1,
+   "default": "0.00",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch No",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "label": "Moisture %"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Select",
+   "label": "Colour",
+   "options": "\nGood\nAverage\nPoor"
+  },
+  {
+   "fieldname": "flake_size",
+   "fieldtype": "Select",
+   "label": "Flake size",
+   "options": "\nGood\nAverage\nPoor"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Select",
+   "label": "Quality",
+   "options": "\nDried\nSweating"
+  },
+  {
+   "fieldname": "overall",
+   "fieldtype": "Select",
+   "label": "Overall",
+   "options": "\nAccept\nRework"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "se_submitted",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "SE Submitted"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.sfg_product && !doc.se_submitted && !doc.stock_entry",
+   "fieldname": "custom_save",
+   "fieldtype": "Button",
+   "label": "Save"
+  },
+  {
+   "depends_on": "eval:doc.sfg_product && doc.se_submitted!=1 && doc.stock_entry",
+   "fieldname": "custom_submit",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "default": "0",
+   "fieldname": "finish_batch",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Finish Batch"
+  },
+  {
+   "fieldname": "finish_for_qty",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Finish for QTY"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-28 16:23:42.518398",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "WIP To SFG Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

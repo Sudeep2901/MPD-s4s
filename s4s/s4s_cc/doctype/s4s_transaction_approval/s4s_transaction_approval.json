@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TA.#####",
+ "creation": "2023-06-29 16:49:23.381281",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_date",
+  "column_break_eltq9",
+  "to_date",
+  "section_break_ov8e4",
+  "company",
+  "column_break_qg9oy",
+  "cc_name",
+  "section_break_exzas",
+  "get_entries",
+  "approval_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Datetime",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_eltq9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Datetime",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_break_ov8e4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.docstatus == 0",
+   "fieldname": "get_entries",
+   "fieldtype": "Button",
+   "label": "Get Entries"
+  },
+  {
+   "fieldname": "approval_details",
+   "fieldtype": "Table",
+   "label": "Transaction Details",
+   "options": "S4S Transaction Approval Item"
+  },
+  {
+   "columns": 2,
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CC Name",
+   "options": "S4S CC List"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "S4S Transaction Approval",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_qg9oy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_exzas",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-05 15:40:57.631397",
+ "modified_by": "Administrator",
+ "module": "S4S CC",
+ "name": "S4S Transaction Approval",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

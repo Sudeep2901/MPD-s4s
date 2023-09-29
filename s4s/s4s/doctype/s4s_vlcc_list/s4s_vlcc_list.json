@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:vlcc_name",
+ "creation": "2022-07-22 21:22:01.532025",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vlcc_name",
+  "cc_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VLCC Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "label": "CC Name",
+   "options": "S4S CC List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-22 21:25:37.090961",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "S4S VLCC List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

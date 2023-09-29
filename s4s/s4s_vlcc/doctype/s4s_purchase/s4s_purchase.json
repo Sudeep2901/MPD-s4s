@@ -1,0 +1,429 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-09-29 11:27:35.533338",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "supplier",
+  "supplier_name",
+  "delivery_location",
+  "set_warehouse",
+  "s4s_farmer_query",
+  "attach_image",
+  "column_break_4",
+  "approved_status",
+  "transaction_date",
+  "timestamp",
+  "vlcc_name",
+  "cc_name",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "purchase_receipt_details_section",
+  "purchase_receipt_details",
+  "receipt_details",
+  "weight_details_section",
+  "total_weight",
+  "kadta",
+  "column_break_15",
+  "kadta_weight",
+  "weight_after_kadta",
+  "total_amount",
+  "other_deductions_section",
+  "supplier_deductions",
+  "taxes",
+  "total_deduction_amount",
+  "grand_total",
+  "utr_details_section",
+  "s4s_utr_no",
+  "s4s_payment_no",
+  "column_break_ejjyp",
+  "fpo_utr_no",
+  "fpo_payment_no",
+  "payment_status",
+  "transporter_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "column_break_31",
+  "driver_name",
+  "driver_mobile_number",
+  "assigned_vehicle",
+  "amended_from",
+  "company",
+  "abbr"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series (\u092e\u093e\u0932\u093f\u0915\u093e)",
+   "options": "TR-.YY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supplier (\u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930)",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name (\u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date (\u0916\u0930\u0947\u0926\u0940 \u0926\u093f\u0928\u093e\u0902\u0915)",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "set_warehouse",
+   "fieldtype": "Link",
+   "label": "Inward Warehouse (\u0906\u0935\u0915 \u0917\u094b\u0926\u093e\u092e)",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Select",
+   "label": "Delivery Location (\u0935\u093f\u0924\u0930\u0923 \u0938\u094d\u0925\u093e\u0928)",
+   "options": "\nAt VLCC\nAt CC\nFarm Pick up"
+  },
+  {
+   "fieldname": "purchase_receipt_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Receipt Details (\u0916\u0930\u0947\u0926\u0940 \u092a\u093e\u0935\u0924\u0940 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "fieldname": "purchase_receipt_details",
+   "fieldtype": "Table",
+   "label": "Purchase receipt details",
+   "options": "S4S Purchase receipt"
+  },
+  {
+   "fieldname": "receipt_details",
+   "fieldtype": "Table",
+   "label": "Packing Details (\u092a\u0945\u0915\u093f\u0902\u0917 \u0924\u092a\u0936\u0940\u0932)",
+   "options": "S4S Goni Weight"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight (Kg) (\u090f\u0915\u0942\u0923 \u0935\u091c\u0928 (\u0915\u093f\u0932\u094b)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kadta_weight",
+   "fieldtype": "Float",
+   "label": "Kadta Weight (Kg) (\u0915\u0921\u0924\u093e \u0935\u091c\u0928 (\u0915\u093f\u0932\u094b)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_after_kadta",
+   "fieldtype": "Float",
+   "label": "Weight after Kadta (Kg) (\u0915\u0921\u0924\u093e \u0928\u0902\u0924\u0930 \u0935\u091c\u0928 (\u0915\u093f\u0932\u094b)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Grand Total (INR) (\u090f\u0915\u0942\u0923 (INR)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "S4S Purchase",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_details_section",
+   "fieldtype": "Section Break",
+   "label": "Weight Details (\u0935\u091c\u0928 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "fieldname": "kadta",
+   "fieldtype": "Select",
+   "label": "Kadta % (\u0915\u0921\u0924\u093e %)",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Other Deductions (\u0907\u0924\u0930 \u0935\u091c\u093e\u0935\u091f)"
+  },
+  {
+   "fieldname": "supplier_deductions",
+   "fieldtype": "Link",
+   "label": "Supplier Deductions (\u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930 \u0915\u092a\u093e\u0924)",
+   "options": "Purchase Taxes and Charges Template"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Supplier Deductions Table (\u092a\u0941\u0930\u0935\u0920\u093e\u0926\u093e\u0930 \u0915\u092a\u093e\u0924 \u0938\u093e\u0930\u0923\u0940)",
+   "options": "Purchase Taxes and Charges"
+  },
+  {
+   "fieldname": "s4s_farmer_query",
+   "fieldtype": "Link",
+   "label": "S4S Farmer Query (S4S \u0936\u0947\u0924\u0915\u0930\u0940 \u091a\u094c\u0915\u0936\u0940)",
+   "options": "S4S Farmer Query"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Net Total (INR) (\u0928\u093f\u0935\u094d\u0935\u0933 \u090f\u0915\u0942\u0923 (INR)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "VLCC Name (VLCC \u0928\u093e\u0935)",
+   "options": "S4S VLCC List"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CC Name (CC \u0928\u093e\u0935)",
+   "options": "S4S CC List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "approved_status",
+   "fieldtype": "Select",
+   "label": "Approval Status (\u092e\u0902\u091c\u0942\u0930 \u0938\u094d\u0925\u093f\u0924\u0940)",
+   "no_copy": 1,
+   "options": "Pending for Approval\nApproved by CC Manager\nRejected by CC Manager\nApproved by Area Manager\nRejected by Area Manager"
+  },
+  {
+   "fieldname": "transporter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transporter Details (\u091f\u094d\u0930\u093e\u0928\u094d\u0938\u092a\u094b\u0930\u094d\u091f\u0930 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No (\u0935\u093e\u0939\u0928 \u0915\u094d\u0930)",
+   "options": "S4S Vehicle",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "vehicle_no.driver_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name (\u091a\u093e\u0932\u0915\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "No",
+   "fieldname": "assigned_vehicle",
+   "fieldtype": "Select",
+   "label": "Assigned Vehicle Status (\u0928\u093f\u092f\u0941\u0915\u094d\u0924 \u0935\u093e\u0939\u0928 \u0938\u094d\u0925\u093f\u0924\u0940)",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deduction_amount",
+   "fieldtype": "Currency",
+   "label": "Total Deduction Amount (\u090f\u0915\u0942\u0923 \u0915\u092a\u093e\u0924\u0940\u091a\u0940 \u0930\u0915\u094d\u0915\u092e)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State (\u0930\u093e\u091c\u094d\u092f)",
+   "options": "S4S State"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company (\u0915\u0902\u092a\u0928\u0940)",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "default": "now",
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Timestamp (\u091f\u093e\u0908\u092e\u0938\u094d\u091f\u0945\u092e\u094d\u092a)"
+  },
+  {
+   "depends_on": "eval: doc.docstatus == 1",
+   "fieldname": "utr_details_section",
+   "fieldtype": "Section Break",
+   "label": "UTR Details (UTR \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "s4s_utr_no",
+   "fieldtype": "Data",
+   "label": "S4S UTR No. (S4S UTR \u0915\u094d\u0930.)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "s4s_payment_no",
+   "fieldtype": "Data",
+   "label": "S4S Payment No. (S4S \u092a\u0947\u092e\u0947\u0902\u091f \u0915\u094d\u0930.)"
+  },
+  {
+   "fieldname": "column_break_ejjyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fpo_utr_no",
+   "fieldtype": "Data",
+   "label": "FPO UTR No. (FPO UTR \u0915\u094d\u0930.)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fpo_payment_no",
+   "fieldtype": "Data",
+   "label": "FPO Payment No. (FPO \u092a\u0947\u092e\u0947\u0902\u091f \u0915\u094d\u0930.)"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Payment Status (\u092a\u0948\u0938\u0947 \u092d\u0930\u0932\u094d\u092f\u093e\u091a\u0940 \u0938\u094d\u0925\u093f\u0924\u0940)",
+   "options": "Pending\nPaid\nA/C Query"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model (\u0935\u093e\u0939\u0928 \u092e\u0949\u0921\u0947\u0932)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number (\u091a\u093e\u0932\u0915\u093e\u091a \u092e\u094b\u092c\u093e\u0908\u0932 \u0928\u0902\u092c\u0930)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Purchase Receipt",
+   "link_fieldname": "s4s_purchase"
+  },
+  {
+   "link_doctype": "RM Transfer VLCC To CC",
+   "link_fieldname": "s4s_purchase"
+  }
+ ],
+ "modified": "2023-09-27 12:42:20.396020",
+ "modified_by": "Administrator",
+ "module": "S4S VLCC",
+ "name": "S4S Purchase",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "VLCC User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

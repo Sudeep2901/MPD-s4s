@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-22 10:20:20.715877",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "product_name",
+  "column_break_v54ha",
+  "date",
+  "vehicle_no",
+  "company",
+  "abbr",
+  "amended_from",
+  "checking_parameter_section",
+  "general_appearance",
+  "checking_parameter_2_section",
+  "drying_status",
+  "no_wet_bags",
+  "no_of_dried_bags",
+  "checking_parameter_3_section",
+  "colour",
+  "a_grade",
+  "column_break_d8f9w",
+  "b_grade",
+  "c_grade",
+  "checking_parameter_4_section",
+  "sensory_eating_quality",
+  "moisture_content",
+  "critical_defects",
+  "column_break_ed9sr",
+  "major_defects",
+  "packaging_and_labelling",
+  "sfg_material_in"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "label": "Product Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SFG QC Check List",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "label": "DCM Name",
+   "options": "DCM List"
+  },
+  {
+   "fieldname": "checking_parameter_section",
+   "fieldtype": "Section Break",
+   "label": "Checking Parameter 1"
+  },
+  {
+   "fieldname": "general_appearance",
+   "fieldtype": "Data",
+   "label": "General Appearance"
+  },
+  {
+   "fieldname": "checking_parameter_2_section",
+   "fieldtype": "Section Break",
+   "label": "Checking Parameter 2"
+  },
+  {
+   "fieldname": "drying_status",
+   "fieldtype": "Data",
+   "label": "Drying status Physical/Visual "
+  },
+  {
+   "fieldname": "no_wet_bags",
+   "fieldtype": "Data",
+   "label": "No. of wet bags (Drying needed/soft )"
+  },
+  {
+   "fieldname": "no_of_dried_bags",
+   "fieldtype": "Data",
+   "label": "No of dried bags (direct use)"
+  },
+  {
+   "fieldname": "checking_parameter_3_section",
+   "fieldtype": "Section Break",
+   "label": "Checking Parameter 3"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "a_grade",
+   "fieldtype": "Data",
+   "label": "A Grade (Light to Dark Pinkish)"
+  },
+  {
+   "fieldname": "b_grade",
+   "fieldtype": "Data",
+   "label": "B Grade (Reddish)"
+  },
+  {
+   "fieldname": "c_grade",
+   "fieldtype": "Data",
+   "label": "C Grade (Burnt/Brown)"
+  },
+  {
+   "fieldname": "checking_parameter_4_section",
+   "fieldtype": "Section Break",
+   "label": "Checking Parameter 4"
+  },
+  {
+   "fieldname": "sensory_eating_quality",
+   "fieldtype": "Data",
+   "label": "Sensory/Eating Quality"
+  },
+  {
+   "fieldname": "moisture_content",
+   "fieldtype": "Data",
+   "label": "Moisture Content"
+  },
+  {
+   "fieldname": "critical_defects",
+   "fieldtype": "Data",
+   "label": "Critical Defects"
+  },
+  {
+   "fieldname": "major_defects",
+   "fieldtype": "Data",
+   "label": "Major Defects"
+  },
+  {
+   "fieldname": "packaging_and_labelling",
+   "fieldtype": "Data",
+   "label": "Packaging and Labelling"
+  },
+  {
+   "fieldname": "column_break_v54ha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_d8f9w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ed9sr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SFG QC.-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fieldname": "sfg_material_in",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "SFG Material In",
+   "options": "SFG Material In"
+  },
+  {
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-22 15:20:33.719057",
+ "modified_by": "Administrator",
+ "module": "S4S Factory",
+ "name": "SFG QC Check List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

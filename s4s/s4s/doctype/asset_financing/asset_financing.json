@@ -1,0 +1,599 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ASSET FI-{#####}",
+ "creation": "2022-08-17 12:27:04.786850",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lead_information_section",
+  "me_lead",
+  "column_break_2",
+  "me_lead_name",
+  "kyc_validation_section",
+  "adhar",
+  "pan",
+  "column_break_3",
+  "bank_passbook",
+  "column_break_5",
+  "address_proof",
+  "address_check",
+  "column_break_7",
+  "kyc_uploaded_on_drive",
+  "all_documents_self_attested",
+  "select_bank_for_financing_section",
+  "bank_name",
+  "branch",
+  "ifsc",
+  "column_break_13",
+  "racc_linked",
+  "district",
+  "generate_quotation_section",
+  "quotation_amount",
+  "quotation_download",
+  "column_break_18",
+  "seller_of_machine",
+  "pmfme_registration_section",
+  "pmfme_login_id",
+  "pmfme_password",
+  "pmfme_registration_stage_section",
+  "documents_uploaded",
+  "primary_registration_done",
+  "column_break_34",
+  "final_registration_done",
+  "bank_sanction_done",
+  "aif_registration_section",
+  "aif_login_id",
+  "aif_password",
+  "column_break_27",
+  "aif_stage_of_registration",
+  "margin_money_section",
+  "margin_money_paid_by",
+  "margin_money_receipt_generate",
+  "column_break_32",
+  "amount_paid_as_margin_money_in_rs",
+  "processing_charges",
+  "bank_requirement_section",
+  "account_number",
+  "bank_name_1",
+  "ifsc_code",
+  "bank_rate_of_interest",
+  "column_break_40",
+  "margin_money_received",
+  "margin_money_amount",
+  "lll_margin_money_receipt",
+  "lv_loan_application_letter",
+  "v_recommendation_letter",
+  "vl_tripartite_arrange_letter",
+  "vll_s4s_me_agreement",
+  "8_bank_signing_formalities_section",
+  "l_signing_formalities_done",
+  "confirmation_sms_to_me",
+  "scheduled_bank_signing_date",
+  "column_break_50",
+  "ll_date_of_signature",
+  "poc_from_field_team",
+  "9_loan_disbursement_section",
+  "disbursement_done",
+  "confirmation_sms_to_me_l",
+  "date_of_disbursement",
+  "loan_ac_number",
+  "column_break_57",
+  "utr__dd_no",
+  "ifsc_code_ld",
+  "emi_start_month",
+  "10_check_list_section",
+  "lead_received",
+  "kyc_checked",
+  "assign_bank",
+  "generate_invoice",
+  "margin_money",
+  "bank_account_details",
+  "column_break_70",
+  "move_to_bank_signing",
+  "agreement",
+  "bank_signing_done",
+  "disbursement_received",
+  "fssai_udhyam_adhar",
+  "send_for_installation"
+ ],
+ "fields": [
+  {
+   "fieldname": "kyc_validation_section",
+   "fieldtype": "Section Break",
+   "label": "1. KYC Validation"
+  },
+  {
+   "default": "0",
+   "fieldname": "adhar",
+   "fieldtype": "Check",
+   "label": "Adhar"
+  },
+  {
+   "default": "0",
+   "fieldname": "pan",
+   "fieldtype": "Check",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "bank_passbook",
+   "fieldtype": "Attach",
+   "label": "Bank Passbook"
+  },
+  {
+   "fieldname": "address_proof",
+   "fieldtype": "Attach",
+   "label": "Address Proof"
+  },
+  {
+   "default": "0",
+   "fieldname": "address_check",
+   "fieldtype": "Check",
+   "label": "Address Check"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_bank_for_financing_section",
+   "fieldtype": "Section Break",
+   "label": "2. Select Bank for Finance"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "label": "Bank Name",
+   "options": "S4S Bank List"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "generate_quotation_section",
+   "fieldtype": "Section Break",
+   "label": "3. Generate Quotation"
+  },
+  {
+   "fieldname": "quotation_amount",
+   "fieldtype": "Currency",
+   "label": "Quotation Amount (In INR)"
+  },
+  {
+   "fieldname": "quotation_download",
+   "fieldtype": "Attach",
+   "label": "Quotation Download"
+  },
+  {
+   "fieldname": "seller_of_machine",
+   "fieldtype": "Select",
+   "label": "Seller Of Machine",
+   "options": "\nS4S\nWE WE"
+  },
+  {
+   "fieldname": "pmfme_registration_section",
+   "fieldtype": "Section Break",
+   "label": "4. PMFME Registration"
+  },
+  {
+   "fieldname": "pmfme_login_id",
+   "fieldtype": "Data",
+   "label": "PMFME Login Id"
+  },
+  {
+   "fieldname": "pmfme_password",
+   "fieldtype": "Data",
+   "label": "PMFME Password"
+  },
+  {
+   "fieldname": "aif_registration_section",
+   "fieldtype": "Section Break",
+   "label": "5. AIF Registration"
+  },
+  {
+   "fieldname": "aif_login_id",
+   "fieldtype": "Data",
+   "label": "AIF Login Id"
+  },
+  {
+   "fieldname": "aif_password",
+   "fieldtype": "Data",
+   "label": "AIF Password"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aif_stage_of_registration",
+   "fieldtype": "Data",
+   "label": "AIF Stage of Registration"
+  },
+  {
+   "fieldname": "margin_money_section",
+   "fieldtype": "Section Break",
+   "label": "6. Margin Money"
+  },
+  {
+   "fieldname": "margin_money_paid_by",
+   "fieldtype": "Select",
+   "label": "Margin Money paid by",
+   "options": "\nME(Self)\nS4S\nWE WE\nCHAFA"
+  },
+  {
+   "fieldname": "margin_money_receipt_generate",
+   "fieldtype": "Attach",
+   "label": "Margin money receipt generate/Upload"
+  },
+  {
+   "fieldname": "amount_paid_as_margin_money_in_rs",
+   "fieldtype": "Currency",
+   "label": "Amount paid as margin money in Rs."
+  },
+  {
+   "fieldname": "processing_charges",
+   "fieldtype": "Currency",
+   "label": "Processing Charges"
+  },
+  {
+   "fieldname": "bank_requirement_section",
+   "fieldtype": "Section Break",
+   "label": "7. Bank requirement"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "margin_money_received",
+   "fieldtype": "Select",
+   "label": "l. Margin Money Received",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "margin_money_amount",
+   "fieldtype": "Currency",
+   "label": "ll. Margin Money Amount"
+  },
+  {
+   "fieldname": "lll_margin_money_receipt",
+   "fieldtype": "Attach",
+   "label": "lll. Margin Money Receipt"
+  },
+  {
+   "fieldname": "lv_loan_application_letter",
+   "fieldtype": "Attach",
+   "label": "lV. Loan Application Letter"
+  },
+  {
+   "fieldname": "v_recommendation_letter",
+   "fieldtype": "Attach",
+   "label": "V. Recommendation Letter"
+  },
+  {
+   "fieldname": "vl_tripartite_arrange_letter",
+   "fieldtype": "Attach",
+   "label": "Vl. Tripartite Arrange Letter"
+  },
+  {
+   "fieldname": "vll_s4s_me_agreement",
+   "fieldtype": "Attach",
+   "label": "Vll. S4S & ME Agreement"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "8_bank_signing_formalities_section",
+   "fieldtype": "Section Break",
+   "label": "8. Bank Signing Formalities"
+  },
+  {
+   "fieldname": "l_signing_formalities_done",
+   "fieldtype": "Select",
+   "label": "l. Signing formalities Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ll_date_of_signature",
+   "fieldtype": "Date",
+   "label": "ll. Date of Signature"
+  },
+  {
+   "fieldname": "9_loan_disbursement_section",
+   "fieldtype": "Section Break",
+   "label": "9. Loan Disbursement"
+  },
+  {
+   "fieldname": "disbursement_done",
+   "fieldtype": "Select",
+   "label": "Disbursement Done",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "date_of_disbursement",
+   "fieldtype": "Date",
+   "label": "Date of Disbursement"
+  },
+  {
+   "fieldname": "loan_ac_number",
+   "fieldtype": "Data",
+   "label": "Loan Ac Number"
+  },
+  {
+   "fieldname": "ifsc_code_ld",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "emi_start_month",
+   "fieldtype": "Date",
+   "label": "EMI Start Month"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "10_check_list_section",
+   "fieldtype": "Section Break",
+   "label": "10. Check List"
+  },
+  {
+   "default": "0",
+   "fieldname": "lead_received",
+   "fieldtype": "Check",
+   "label": "Lead Received"
+  },
+  {
+   "default": "0",
+   "fieldname": "kyc_checked",
+   "fieldtype": "Check",
+   "label": "KYC Checked"
+  },
+  {
+   "default": "0",
+   "fieldname": "assign_bank",
+   "fieldtype": "Check",
+   "label": "Assign Bank"
+  },
+  {
+   "default": "0",
+   "fieldname": "margin_money",
+   "fieldtype": "Check",
+   "label": "Margin Money"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_account_details",
+   "fieldtype": "Check",
+   "label": "Bank Account Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "move_to_bank_signing",
+   "fieldtype": "Check",
+   "label": "Move to Bank Signing"
+  },
+  {
+   "default": "0",
+   "fieldname": "agreement",
+   "fieldtype": "Check",
+   "label": "Agreement"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_signing_done",
+   "fieldtype": "Check",
+   "label": "Bank Signing Done"
+  },
+  {
+   "default": "0",
+   "fieldname": "disbursement_received",
+   "fieldtype": "Check",
+   "label": "Disbursement Received"
+  },
+  {
+   "default": "0",
+   "fieldname": "fssai_udhyam_adhar",
+   "fieldtype": "Check",
+   "label": "FSSAI Udhyam Adhar"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_for_installation",
+   "fieldtype": "Check",
+   "label": "Send for Installation"
+  },
+  {
+   "fieldname": "column_break_70",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_information_section",
+   "fieldtype": "Section Break",
+   "label": "Lead Information"
+  },
+  {
+   "fieldname": "me_lead",
+   "fieldtype": "Link",
+   "label": "ME Lead",
+   "options": "ME Lead"
+  },
+  {
+   "fieldname": "me_lead_name",
+   "fieldtype": "Data",
+   "label": "ME Lead Name"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.l_signing_formalities_done === \"Yes\"",
+   "fieldname": "confirmation_sms_to_me",
+   "fieldtype": "Select",
+   "label": "Confirmation SMS to ME",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.disbursement_done === \"Yes\"",
+   "fieldname": "confirmation_sms_to_me_l",
+   "fieldtype": "Select",
+   "label": "Confirmation SMS to ME L",
+   "options": "\nYes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "kyc_uploaded_on_drive",
+   "fieldtype": "Check",
+   "label": "KYC Uploaded On Drive"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_documents_self_attested",
+   "fieldtype": "Check",
+   "label": "All Document's Self Attested"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "S4S District List"
+  },
+  {
+   "fieldname": "ifsc",
+   "fieldtype": "Data",
+   "label": "IFSC "
+  },
+  {
+   "fieldname": "racc_linked",
+   "fieldtype": "Data",
+   "label": "RACC Linked"
+  },
+  {
+   "fieldname": "pmfme_registration_stage_section",
+   "fieldtype": "Section Break",
+   "label": "4.1 PMFME Registration Stage"
+  },
+  {
+   "default": "0",
+   "fieldname": "documents_uploaded",
+   "fieldtype": "Check",
+   "label": "Documents Uploaded"
+  },
+  {
+   "default": "0",
+   "fieldname": "primary_registration_done",
+   "fieldtype": "Check",
+   "label": "Primary Registration done"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "final_registration_done",
+   "fieldtype": "Check",
+   "label": "Final Registration done"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_sanction_done",
+   "fieldtype": "Check",
+   "label": "Bank Sanction done"
+  },
+  {
+   "fieldname": "bank_name_1",
+   "fieldtype": "Link",
+   "label": "Bank Name",
+   "options": "S4S Bank List"
+  },
+  {
+   "fieldname": "bank_rate_of_interest",
+   "fieldtype": "Data",
+   "label": "Bank Rate of Interest"
+  },
+  {
+   "fieldname": "scheduled_bank_signing_date",
+   "fieldtype": "Date",
+   "label": "III. Scheduled Bank Signing Date"
+  },
+  {
+   "fieldname": "poc_from_field_team",
+   "fieldtype": "Data",
+   "label": "IV. POC From Field Team"
+  },
+  {
+   "fieldname": "utr__dd_no",
+   "fieldtype": "Data",
+   "label": "UTR / DD No"
+  },
+  {
+   "default": "0",
+   "fieldname": "generate_invoice",
+   "fieldtype": "Check",
+   "label": "Generate Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-01 14:02:03.198239",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "Asset Financing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

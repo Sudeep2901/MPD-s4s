@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-09-06 11:59:36.819552",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "supplier",
+  "supplier_name",
+  "vlcc_name",
+  "cc_name",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "column_break_zawn5",
+  "date",
+  "time",
+  "company",
+  "abbr",
+  "edit_posting_date",
+  "s4s_purchase",
+  "section_break_ik5c9",
+  "vlcc_warehouse",
+  "column_break_xsh1i",
+  "cc_warehouse",
+  "section_break_x2fxf",
+  "rm_item_details",
+  "transport_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "transport_status",
+  "column_break_pqyre",
+  "driver_name",
+  "driver_mobile_number",
+  "e_way_bill_no",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series (\u092e\u093e\u0932\u093f\u0915\u093e)",
+   "options": "RM-VLCC-CC-.YY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Material Transfer",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "label": "Stock Entry Type (\u0938\u094d\u091f\u0949\u0915 \u090f\u0902\u091f\u094d\u0930\u0940 \u092a\u094d\u0930\u0915\u093e\u0930)",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zawn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date (\u0924\u093e\u0930\u0940\u0916)",
+   "no_copy": 1,
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time (\u0935\u0947\u0933)",
+   "no_copy": 1,
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company (\u0915\u0902\u092a\u0928\u0940)",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_posting_date",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Edit Posting Date"
+  },
+  {
+   "fieldname": "section_break_ik5c9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xsh1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_x2fxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_item_details",
+   "fieldtype": "Table",
+   "label": "RM Item Details (RM \u0906\u092f\u091f\u092e \u0924\u092a\u0936\u0940\u0932)",
+   "options": "S4S VLCC RM Transfer To CC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transporter Details (\u091f\u094d\u0930\u093e\u0928\u094d\u0938\u092a\u094b\u0930\u094d\u091f\u0930 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No (\u0935\u093e\u0939\u0928 \u0915\u094d\u0930)",
+   "options": "S4S Vehicle"
+  },
+  {
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model (\u0935\u093e\u0939\u0928 \u092e\u0949\u0921\u0947\u0932)"
+  },
+  {
+   "fieldname": "column_break_pqyre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name (\u091a\u093e\u0932\u0915\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number (\u091a\u093e\u0932\u0915\u093e\u091a \u092e\u094b\u092c\u093e\u0908\u0932 \u0928\u0902\u092c\u0930)"
+  },
+  {
+   "fieldname": "e_way_bill_no",
+   "fieldtype": "Data",
+   "label": "E Way Bill No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RM Transfer VLCC To CC",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farmer (\u0936\u0947\u0924\u0915\u0930\u0940 \u0915\u094b\u0921)",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Farmer Name (\u0936\u0947\u0924\u0915\u0931\u094d\u092f\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "VLCC Name (VLCC \u0928\u093e\u0935)",
+   "options": "S4S VLCC List"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CC Name (CC \u0928\u093e\u0935)",
+   "options": "S4S CC List"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State (\u0930\u093e\u091c\u094d\u092f)",
+   "options": "S4S State"
+  },
+  {
+   "fieldname": "cc_warehouse",
+   "fieldtype": "Link",
+   "label": "CC Warehouse (CC \u0917\u094b\u0926\u093e\u092e)",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vlcc_warehouse",
+   "fieldtype": "Link",
+   "label": "VLCC Warehouse (VLCC \u0917\u094b\u0926\u093e\u092e)",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "s4s_purchase",
+   "fieldtype": "Link",
+   "label": "S4S Purchase (S4S \u0916\u0930\u0947\u0926\u0940)",
+   "options": "S4S Purchase"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "transport_status",
+   "fieldtype": "Select",
+   "label": "Transport Status (\u091f\u094d\u0930\u093e\u0928\u094d\u0938\u092a\u094b\u0930\u094d\u091f \u0938\u094d\u0925\u093f\u0924\u0940) ",
+   "options": "\nIn Transit\nDelivered",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "rm_transfer_vlcc_to_cc"
+  },
+  {
+   "link_doctype": "VLCC RM In",
+   "link_fieldname": "rm_transfer_vlcc_to_cc"
+  }
+ ],
+ "modified": "2023-09-27 12:44:17.635131",
+ "modified_by": "Administrator",
+ "module": "S4S VLCC",
+ "name": "RM Transfer VLCC To CC",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,51 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-11-24 14:06:28.366733",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "S4S Logistic",
+ "links": [],
+ "modified": "2023-02-06 15:26:23.298900",
+ "modified_by": "ramesh.mhaske@mannlowe.com",
+ "module": "S4S Logistic",
+ "name": "S4S Logistic",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Vehicle Onboarding",
+   "link_to": "S4S Vehicle",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "VLCC Vehicle Assignment Plan",
+   "link_to": "S4S Vehicle Plan",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM Material Request",
+   "link_to": "DCM Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM SFG Dispatch Request",
+   "link_to": "SFG Dispatch Request",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "S4S Logistic"
+}

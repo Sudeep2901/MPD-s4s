@@ -1,0 +1,36 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-25 10:33:15.998301",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_of_lead",
+  "select"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_of_lead",
+   "fieldtype": "Data",
+   "label": "Source of Lead"
+  },
+  {
+   "default": "0",
+   "fieldname": "select",
+   "fieldtype": "Check",
+   "label": "Select"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-25 10:33:15.998301",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "S4S Source of Source",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

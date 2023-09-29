@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-16 16:09:21.321588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "me_code",
+  "me_name",
+  "me_unique_code",
+  "add_to_transit",
+  "column_break_3",
+  "date",
+  "company",
+  "abbr",
+  "actual_weight_yes",
+  "actual_weight_no",
+  "warehouse_section",
+  "me_warehouse",
+  "column_break_12",
+  "cc_warehouse",
+  "dispatch_item_section",
+  "me_dispatch_item",
+  "transport_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "column_break_jwvca",
+  "driver_name",
+  "driver_mobile_number",
+  "e_way_bill_no",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ME SFG DIS-NOTE-"
+  },
+  {
+   "fieldname": "me_code",
+   "fieldtype": "Link",
+   "label": "ME Code",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "me_code.supplier_name",
+   "fieldname": "me_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ME Name"
+  },
+  {
+   "default": "1",
+   "fieldname": "add_to_transit",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Add To Transit"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "SFG Warehouse Details"
+  },
+  {
+   "fieldname": "me_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SFG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cc_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CC/Factory Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "dispatch_item_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "me_dispatch_item",
+   "fieldtype": "Table",
+   "label": "SFG Dispatch Item",
+   "options": "DCM Dispatch Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ME SFG Dispatch Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Material Transfer",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "me_code.me_code",
+   "fieldname": "me_unique_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ME Unique Code"
+  },
+  {
+   "fieldname": "transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transport Details"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle"
+  },
+  {
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model"
+  },
+  {
+   "fieldname": "column_break_jwvca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number"
+  },
+  {
+   "fieldname": "e_way_bill_no",
+   "fieldtype": "Data",
+   "label": "E Way Bill No"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_weight_yes",
+   "fieldtype": "Check",
+   "label": "Actual Weight (Yes)"
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_weight_no",
+   "fieldtype": "Check",
+   "label": "Actual Weight (No)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "me_sfg_dispatch_note"
+  },
+  {
+   "link_doctype": "SFG Material In",
+   "link_fieldname": "me_sfg_dispatch_note"
+  }
+ ],
+ "modified": "2023-08-16 20:04:48.183747",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "ME SFG Dispatch Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

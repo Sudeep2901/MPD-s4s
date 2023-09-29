@@ -1,0 +1,279 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-18 11:27:20.135245",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "dcm_name",
+  "dcm_location",
+  "me_code",
+  "me_name",
+  "me_unique_code",
+  "column_break_zawn5",
+  "date",
+  "time",
+  "edit_posting_date",
+  "company",
+  "abbr",
+  "material_transfer_wh_to_wh",
+  "me_sfg_dispatch_note",
+  "material_type",
+  "section_break_ik5c9",
+  "sent_by",
+  "rm_warehouse",
+  "column_break_xsh1i",
+  "received_by",
+  "wip_warehouse",
+  "section_break_x2fxf",
+  "rm_item_details",
+  "transport_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "column_break_pqyre",
+  "driver_name",
+  "driver_mobile_number",
+  "e_way_bill_no",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SFG-MAT-IN-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Material Transfer",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:!doc.me_sfg_dispatch_note",
+   "fieldname": "material_transfer_wh_to_wh",
+   "fieldtype": "Link",
+   "label": "SFG Dispatch Request",
+   "options": "SFG Dispatch Request"
+  },
+  {
+   "fieldname": "column_break_zawn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_posting_date",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Edit Posting Date"
+  },
+  {
+   "fieldname": "material_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Material Type",
+   "options": "\nRM\nSFG\nFG"
+  },
+  {
+   "fieldname": "section_break_ik5c9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sent_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sent By"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_xsh1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Received By"
+  },
+  {
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "section_break_x2fxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_item_details",
+   "fieldtype": "Table",
+   "label": "Item Details",
+   "options": "SFG Material In Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transport Details"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle"
+  },
+  {
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model"
+  },
+  {
+   "fieldname": "column_break_pqyre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number"
+  },
+  {
+   "fieldname": "e_way_bill_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "E Way Bill No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SFG Material In",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "label": "DCM Name",
+   "options": "DCM List"
+  },
+  {
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fieldname": "me_code",
+   "fieldtype": "Link",
+   "label": "ME Code",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "me_code.supplier_name",
+   "fieldname": "me_name",
+   "fieldtype": "Data",
+   "label": "ME Name"
+  },
+  {
+   "fieldname": "me_unique_code",
+   "fieldtype": "Data",
+   "label": "ME Unique Code"
+  },
+  {
+   "depends_on": "eval:!doc.material_transfer_wh_to_wh",
+   "fieldname": "me_sfg_dispatch_note",
+   "fieldtype": "Link",
+   "label": "ME SFG Dispatch Note",
+   "options": "ME SFG Dispatch Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "sfg_material_in"
+  },
+  {
+   "link_doctype": "SFG QC Check List",
+   "link_fieldname": "sfg_material_in"
+  }
+ ],
+ "modified": "2023-08-22 15:19:54.576274",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "SFG Material In",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

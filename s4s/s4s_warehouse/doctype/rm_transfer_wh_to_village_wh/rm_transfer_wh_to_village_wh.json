@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-01 10:29:53.848613",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "column_break_zawn5",
+  "date",
+  "time",
+  "company",
+  "abbr",
+  "edit_posting_date",
+  "material_type",
+  "section_break_ik5c9",
+  "rm_warehouse",
+  "sent_by",
+  "column_break_xsh1i",
+  "wip_warehouse",
+  "received_by",
+  "section_break_x2fxf",
+  "rm_item_details",
+  "transport_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "column_break_pqyre",
+  "driver_name",
+  "driver_mobile_number",
+  "e_way_bill_no",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RM-WH-VIL-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Material Transfer",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zawn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "no_copy": 1,
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "no_copy": 1,
+   "read_only_depends_on": "eval: doc.edit_posting_date == 0"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_posting_date",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Edit Posting Date"
+  },
+  {
+   "fieldname": "material_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Material Type",
+   "options": "\nRM\nSFG\nFG"
+  },
+  {
+   "fieldname": "section_break_ik5c9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "sent_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sent By"
+  },
+  {
+   "fieldname": "column_break_xsh1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Received By"
+  },
+  {
+   "fieldname": "section_break_x2fxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_item_details",
+   "fieldtype": "Table",
+   "label": "Item Details",
+   "options": "S4S Item Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transport Details"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle"
+  },
+  {
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model"
+  },
+  {
+   "fieldname": "column_break_pqyre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number"
+  },
+  {
+   "fieldname": "e_way_bill_no",
+   "fieldtype": "Data",
+   "label": "E Way Bill No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RM Transfer WH To Village WH",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "rm_transfer_wh_to_village_wh"
+  },
+  {
+   "link_doctype": "ME RM In",
+   "link_fieldname": "material_transfer_wh_to_wh"
+  }
+ ],
+ "modified": "2023-09-06 12:16:07.215389",
+ "modified_by": "Administrator",
+ "module": "S4S Warehouse",
+ "name": "RM Transfer WH To Village WH",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

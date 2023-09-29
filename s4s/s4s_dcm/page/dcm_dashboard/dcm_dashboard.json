@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2023-07-11 12:43:55.056023",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-07-11 12:43:55.056023",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "dcm-dashboard",
+ "owner": "Administrator",
+ "page_name": "dcm-dashboard",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "DCM Dashboard"
+}

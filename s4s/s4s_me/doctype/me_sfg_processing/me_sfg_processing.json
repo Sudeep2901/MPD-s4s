@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-08 11:07:48.490540",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "me_code",
+  "me_name",
+  "me_unique_code",
+  "column_break_3zyh8",
+  "date",
+  "edit_date",
+  "company",
+  "abbr",
+  "processing_from_date",
+  "processing_to_date",
+  "dcm_sfg_transfer_to_wip",
+  "section_break_p0tyf",
+  "wip_warehouse",
+  "column_break_kukiv",
+  "fg_warehouse",
+  "section_break_0edbd",
+  "items",
+  "section_break_85zkg",
+  "fg_items_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ME.-.SFG.-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Manufacture",
+   "fieldname": "stock_entry_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry Type",
+   "options": "Stock Entry Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3zyh8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Document Date",
+   "read_only_depends_on": "eval:doc.edit_date == 0"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_date",
+   "fieldtype": "Check",
+   "label": "Edit Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fieldname": "dcm_sfg_transfer_to_wip",
+   "fieldtype": "Link",
+   "label": "SFG Transfer to WIP",
+   "options": "SFG Transfer To WIP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_p0tyf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wip_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "WIP Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_kukiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fg_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "FG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "section_break_0edbd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "RM WIP Items",
+   "options": "RM Item Details"
+  },
+  {
+   "fieldname": "section_break_85zkg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fg_items_table",
+   "fieldtype": "Table",
+   "label": "FG Items",
+   "options": "FG Items Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ME SFG Processing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "me_code",
+   "fieldtype": "Link",
+   "label": "ME Code",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "me_code.supplier_name",
+   "fieldname": "me_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ME Name"
+  },
+  {
+   "depends_on": "eval:doc.me_unique_code != null || doc.me_unique_code",
+   "fetch_from": "me_code.me_code",
+   "fieldname": "me_unique_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ME Unique Code"
+  },
+  {
+   "fieldname": "processing_from_date",
+   "fieldtype": "Date",
+   "label": "Processing From Date"
+  },
+  {
+   "fieldname": "processing_to_date",
+   "fieldtype": "Date",
+   "label": "Processing To Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "me_sfg_processing"
+  }
+ ],
+ "modified": "2023-08-22 09:53:43.107451",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "ME SFG Processing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

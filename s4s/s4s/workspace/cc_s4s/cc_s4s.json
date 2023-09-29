@@ -1,0 +1,105 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-06-09 14:41:52.111273",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "CC S4S",
+ "links": [],
+ "modified": "2023-06-09 15:21:43.130389",
+ "modified_by": "ramesh.mhaske@mannlowe.com",
+ "module": "S4S",
+ "name": "CC S4S",
+ "owner": "ramesh.mhaske@mannlowe.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Supplier",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Purchase Receipt",
+   "link_to": "Purchase Receipt",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Purchase Invoice",
+   "link_to": "Purchase Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "DCM RM Material Request",
+   "link_to": "DCM Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pick List",
+   "link_to": "Pick List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Material Transfer / In WH To WH",
+   "link_to": "Material Transfer WH To WH",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "RM/SFG Transfer To WIP",
+   "link_to": "SFG Transfer To WIP",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "SFG Transfer WIP To FG",
+   "link_to": "SFG Transfer WIP to FG",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "CC S4S"
+}

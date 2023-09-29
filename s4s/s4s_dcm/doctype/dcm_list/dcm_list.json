@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{dcm_name}",
+ "creation": "2022-11-30 12:00:31.699954",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dcm_name",
+  "dcm_code",
+  "location",
+  "dcm_supervisor",
+  "dcm_field_executive",
+  "column_break_2",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "pin_code",
+  "section_break_4",
+  "rm_location",
+  "transit_location",
+  "factory_transit",
+  "column_break_7",
+  "wip_location",
+  "sfg_location",
+  "factory_rm",
+  "dcm_dispatch_section",
+  "dcm_dispatch_warehouse"
+ ],
+ "fields": [
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DCM Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dcm_code",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "DCM Code"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "SFG Processing Warehouse "
+  },
+  {
+   "fieldname": "rm_location",
+   "fieldtype": "Link",
+   "label": "RM Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "wip_location",
+   "fieldtype": "Link",
+   "label": "WIP Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "sfg_location",
+   "fieldtype": "Link",
+   "label": "SFG Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Location",
+   "options": "DCM Location"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "S4S District List"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "S4S State"
+  },
+  {
+   "fieldname": "pin_code",
+   "fieldtype": "Data",
+   "label": "Pin Code"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "S4S Village List"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "dcm_dispatch_section",
+   "fieldtype": "Section Break",
+   "label": "DCM SFG Dispatch  Warehouse"
+  },
+  {
+   "fieldname": "dcm_dispatch_warehouse",
+   "fieldtype": "Table",
+   "label": "DCM SFG Dispatch Warehouse",
+   "options": "ME warehouse details"
+  },
+  {
+   "fieldname": "transit_location",
+   "fieldtype": "Link",
+   "label": "Transit Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "factory_transit",
+   "fieldtype": "Link",
+   "label": "Factory SFG Transit Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "factory_rm",
+   "fieldtype": "Link",
+   "label": "Factory SFG RM Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "dcm_supervisor",
+   "fieldtype": "Link",
+   "label": "DCM Supervisor",
+   "options": "DCM Supervisor"
+  },
+  {
+   "fieldname": "dcm_field_executive",
+   "fieldtype": "Link",
+   "label": "DCM Field Executive",
+   "options": "DCM Field Executive"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-13 11:16:42.365445",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "DCM List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

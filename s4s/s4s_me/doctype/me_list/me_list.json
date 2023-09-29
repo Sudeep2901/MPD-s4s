@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:me_name",
+ "creation": "2022-12-06 11:57:42.549446",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "me_name",
+  "me_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "me_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "ME Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "me_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ME Code",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-15 14:47:55.994494",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "ME List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

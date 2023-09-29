@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-09 14:21:37.289233",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sfg_warehouse",
+  "factory_warehouse",
+  "attach_image",
+  "attach_image_1",
+  "column_break_4",
+  "request_date",
+  "required_date",
+  "tentative_scheduled_date_to",
+  "company",
+  "abbr",
+  "section_break_7",
+  "sfg_material_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "SFG FACT DISP-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "SFG FACT DISP-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sfg_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SFG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "factory_warehouse",
+   "fieldtype": "Link",
+   "label": "Factory Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Document Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tentative Scheduled Date From"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "SFG Material Details"
+  },
+  {
+   "fieldname": "sfg_material_details",
+   "fieldtype": "Table",
+   "label": "SFG Material Details",
+   "options": "S4S Material Request To Factory"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SFG Dispatch Request To Factory",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tentative_scheduled_date_to",
+   "fieldtype": "Date",
+   "label": "Tentative Scheduled Date To"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "attach_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Material Transfer WH To WH",
+   "link_fieldname": "sfg_dispatch_request_to_factory"
+  }
+ ],
+ "modified": "2023-09-14 10:47:03.508359",
+ "modified_by": "Administrator",
+ "module": "S4S Warehouse",
+ "name": "SFG Dispatch Request To Factory",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

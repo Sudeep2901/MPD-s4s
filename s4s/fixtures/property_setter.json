@@ -1,0 +1,19 @@
+[
+ {
+  "default_value": null,
+  "doc_type": "Purchase Receipt Item",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "base_rate",
+  "modified": "2023-06-30 16:14:41.819085",
+  "name": "Purchase Receipt Item-base_rate-precision",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property": "precision",
+  "property_type": "Select",
+  "row_name": null,
+  "value": "3"
+ }
+]

@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-12-01 12:28:06.825148",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "column_break_3",
+  "approval_status",
+  "dcm_supervisor",
+  "cc_user",
+  "factory_rm_store_manager",
+  "logistic_supervisor",
+  "date",
+  "pickup_date",
+  "company",
+  "abbr",
+  "warehouse_section",
+  "dcm_warehouse",
+  "column_break_12",
+  "cc_warehouse",
+  "dispatch_item_section",
+  "dcm_dispatch_item",
+  "amended_from",
+  "logistic_details_section",
+  "trip_start",
+  "trip_end",
+  "vehicle_no",
+  "vehicle_model",
+  "driver_name",
+  "driver_mobile_number",
+  "column_break_21",
+  "assigned_vehicle",
+  "scheduling_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SFG RE.-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "DCM Name",
+   "options": "DCM List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SFG Dispatch Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dispatch_item_section",
+   "fieldtype": "Section Break",
+   "label": "DCM Dispatch Request Item"
+  },
+  {
+   "fieldname": "dcm_dispatch_item",
+   "fieldtype": "Table",
+   "label": "DCM Dispatch Item",
+   "options": "DCM Dispatch Item"
+  },
+  {
+   "fetch_from": "dcm_name.location",
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "DCM Warehouse Details"
+  },
+  {
+   "fieldname": "dcm_warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "DCM Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cc_warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CC/Factory Warehouse",
+   "options": "Warehouse",
+   "permlevel": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "logistic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Logistic Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_start",
+   "fieldtype": "Check",
+   "label": "TRIP START",
+   "permlevel": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_end",
+   "fieldtype": "Check",
+   "label": "TRIP END",
+   "permlevel": 2
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number",
+   "permlevel": 3
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "assigned_vehicle",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Assigned Vehicle",
+   "options": "\nYes\nNo",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scheduling_date",
+   "fieldtype": "Date",
+   "label": "Scheduling Date",
+   "permlevel": 3
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Pickup Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "\nApprove by DCM Supervisor\nReject by DCM Supervisor\nApprove by CC Supervisor\nApprove by Factory Supervisor\nAccept by Logistic Supervisor\nClose Request",
+   "read_only_depends_on": "eval:doc.trip_end || doc.approval_status === \"Close Request\""
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "dcm_supervisor",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "DCM Supervisor"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "cc_user",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "CC User"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "factory_rm_store_manager",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Factory RM Store Manager"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "logistic_supervisor",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Logistic Supervisor"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "sfg_dispatch_request"
+  },
+  {
+   "link_doctype": "SFG Material In",
+   "link_fieldname": "material_transfer_wh_to_wh"
+  }
+ ],
+ "modified": "2023-07-20 15:10:46.909729",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "SFG Dispatch Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

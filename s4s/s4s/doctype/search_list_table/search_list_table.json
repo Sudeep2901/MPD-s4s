@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-07 16:52:49.940643",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "fields",
+  "fieldname",
+  "field_names",
+  "value",
+  "fieldtype"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Value"
+  },
+  {
+   "fetch_from": "field_names.field_name",
+   "fieldname": "field_names",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Field Name"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Field",
+   "options": "Field Name"
+  },
+  {
+   "fetch_from": "fields.field_name",
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fieldname"
+  },
+  {
+   "fetch_from": "fields.field_type",
+   "fieldname": "fieldtype",
+   "fieldtype": "Data",
+   "label": "FieldType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-18 10:56:40.111082",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "Search List Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:goni_qty",
+ "creation": "2023-01-06 14:09:25.844545",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goni_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "goni_qty",
+   "fieldtype": "Data",
+   "label": "Goni Qty",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-06 14:09:25.844545",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "S4S Goni Qty",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

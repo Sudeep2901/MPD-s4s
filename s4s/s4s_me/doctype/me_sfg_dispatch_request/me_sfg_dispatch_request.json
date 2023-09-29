@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-07 17:13:08.903474",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "me_code",
+  "me_name",
+  "column_break_3",
+  "date",
+  "pickup_date",
+  "warehouse_section",
+  "me_warehouse",
+  "column_break_12",
+  "cc_warehouse",
+  "dispatch_item_section",
+  "me_dispatch_item",
+  "logistic_details_section",
+  "trip_start",
+  "trip_end",
+  "vehicle_no",
+  "vehicle_model",
+  "driver_name",
+  "driver_mobile_number",
+  "column_break_21",
+  "assigned_vehicle",
+  "scheduling_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ME SFG RE.-"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Pickup Date"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "ME Warehouse Details"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cc_warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CC/Factory Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "dispatch_item_section",
+   "fieldtype": "Section Break",
+   "label": "ME Dispatch Request Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ME SFG Dispatch Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "logistic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Logistic Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_start",
+   "fieldtype": "Check",
+   "label": "TRIP START"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "trip_end",
+   "fieldtype": "Check",
+   "label": "TRIP END"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "S4S Vehicle"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "assigned_vehicle",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Assigned Vehicle",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scheduling_date",
+   "fieldtype": "Date",
+   "label": "Scheduling Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ME SFG Dispatch Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "me_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ME Code",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "me_code.supplier_name",
+   "fieldname": "me_name",
+   "fieldtype": "Data",
+   "label": "ME Name"
+  },
+  {
+   "fieldname": "me_warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ME Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "me_dispatch_item",
+   "fieldtype": "Table",
+   "label": "ME Dispatch Item",
+   "options": "DCM Dispatch Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "me_sfg_dispatch_request"
+  }
+ ],
+ "modified": "2023-02-08 10:08:05.904161",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "ME SFG Dispatch Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

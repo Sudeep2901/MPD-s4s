@@ -1,0 +1,976 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-08-04 16:42:57.542923",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lead_type_section",
+  "lead_type",
+  "column_break_3",
+  "lead_approval_status",
+  "personal_information_section",
+  "naming_series",
+  "lead_name",
+  "age",
+  "religion",
+  "column_break_7",
+  "lead_qualification_owner",
+  "caste",
+  "category",
+  "marital_status",
+  "education_section",
+  "education_deatils",
+  "work_status_section",
+  "housewife",
+  "own_farm",
+  "farm_labour",
+  "job",
+  "column_break_16",
+  "daily_wage_worker",
+  "part_time_work",
+  "work_experience",
+  "work_experience_details",
+  "family_information_section",
+  "no_of_family_members",
+  "family_type",
+  "husband",
+  "husbands_occupation",
+  "no_of_children",
+  "column_break_28",
+  "age_youngest_child",
+  "age_oldest_child",
+  "me_stay_with_inlaws",
+  "father_inlaw",
+  "mother_inlaw",
+  "support_from_family_section",
+  "husband_1",
+  "children",
+  "inlaws",
+  "family_landholding_section",
+  "me_household",
+  "irrigation_type",
+  "crops_grown_section",
+  "soybean",
+  "wheat",
+  "maize",
+  "ginger",
+  "tomato",
+  "column_break_49",
+  "moong",
+  "onion",
+  "tur",
+  "bajra",
+  "cotton",
+  "household_income_section",
+  "earning_members",
+  "annual_farm_income",
+  "annual_other_income",
+  "column_break_47",
+  "family_income_dependency",
+  "no_of_cattle",
+  "cow",
+  "buffalo",
+  "goat",
+  "cattle_details",
+  "behaviors_traits_section",
+  "needy_for_work",
+  "hardwork",
+  "communication",
+  "understanding_of_work",
+  "column_break_56",
+  "behavior_with_group",
+  "remark",
+  "me_committed_s4s",
+  "infrastructure_requirement_section",
+  "space",
+  "site_located_at",
+  "accessibility_me_full_time",
+  "accessibility_me_part_time",
+  "distance_from_site",
+  "space_rating_hygiene",
+  "space_rating_safety",
+  "space_rating_neighbor",
+  "flooring",
+  "electricity_type",
+  "electricity_meter",
+  "electricity_load",
+  "column_break_75",
+  "electricity_power_cut",
+  "electricity_remark",
+  "water_source",
+  "water_availability",
+  "storage_availability",
+  "road_connectivity",
+  "unloading_rm",
+  "hamal_availability",
+  "documentation_section",
+  "aadhar_card",
+  "aadhar_card_no",
+  "pan_card",
+  "pan_card_no",
+  "address_proof",
+  "column_break_85",
+  "bank_passbook",
+  "ration_card",
+  "voters_id",
+  "light_bill",
+  "others",
+  "declaration_section",
+  "communicated_me",
+  "dcm_work",
+  "bank_loan",
+  "earning_potential",
+  "column_break_93",
+  "company_requirements",
+  "legal",
+  "ethics",
+  "recommendation_section",
+  "me_willing_work",
+  "family_willing_support",
+  "banking_willingness",
+  "column_break_101",
+  "recommend_me",
+  "remark_2",
+  "me_lead",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "lead_type_section",
+   "fieldtype": "Section Break",
+   "label": "Lead Type"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "lead_type",
+   "fieldtype": "Select",
+   "label": "Lead Type",
+   "options": "\nDCM Lead\nDCM Member\nME"
+  },
+  {
+   "bold": 1,
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "default": "LEAD QF.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "LEAD QF.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nMarried\nUnmarried\nWidowed\nDivorced"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "education_section",
+   "fieldtype": "Section Break",
+   "label": "Education"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "education_deatils",
+   "fieldtype": "Select",
+   "label": "Education Deatils",
+   "options": "\nTill 5th\nTill 8th\n10th Pass\n12th Pass\nGraduate"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "work_status_section",
+   "fieldtype": "Section Break",
+   "label": "Work Status"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "housewife",
+   "fieldtype": "Check",
+   "label": "Housewife"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "own_farm",
+   "fieldtype": "Check",
+   "label": "Own Farm"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "farm_labour",
+   "fieldtype": "Check",
+   "label": "Farm Labour"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "job",
+   "fieldtype": "Check",
+   "label": "Job"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "daily_wage_worker",
+   "fieldtype": "Check",
+   "label": "Daily Wage Worker"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "part_time_work",
+   "fieldtype": "Check",
+   "label": "Part Time Work(Business)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "work_experience",
+   "fieldtype": "Data",
+   "label": "Work Experience (In Years)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "work_experience_details",
+   "fieldtype": "Small Text",
+   "label": "Work Experience Details"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "family_information_section",
+   "fieldtype": "Section Break",
+   "label": "Family Information"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_family_members",
+   "fieldtype": "Data",
+   "label": "No of Family Members "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "family_type",
+   "fieldtype": "Select",
+   "label": "Family Type",
+   "options": "\nNuclear\nJoint"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "husband",
+   "fieldtype": "Select",
+   "label": "Husband",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "husbands_occupation",
+   "fieldtype": "Select",
+   "label": "Husband's Occupation",
+   "options": "\nFarmer\nFarm Labour\nJob\nBusiness\nWorker\nIdle"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_children",
+   "fieldtype": "Select",
+   "label": "No of Children ",
+   "options": "\nNo Kids\n1\n2\n3\n4\n5"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "age_youngest_child",
+   "fieldtype": "Data",
+   "label": "Age of the youngest child"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "age_oldest_child",
+   "fieldtype": "Data",
+   "label": "Age of the Oldest Child"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "me_stay_with_inlaws",
+   "fieldtype": "Select",
+   "label": "Does the ME and her In-laws stay together?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "father_inlaw",
+   "fieldtype": "Check",
+   "label": "Father In-law"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "mother_inlaw",
+   "fieldtype": "Check",
+   "label": "Mother In-Law"
+  },
+  {
+   "fieldname": "support_from_family_section",
+   "fieldtype": "Section Break",
+   "label": "Does Micro-entrepreneur have support from her family?"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "husband_1",
+   "fieldtype": "Check",
+   "label": "Husband "
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "children",
+   "fieldtype": "Check",
+   "label": "Children"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "inlaws",
+   "fieldtype": "Check",
+   "label": "In-Laws"
+  },
+  {
+   "fieldname": "family_landholding_section",
+   "fieldtype": "Section Break",
+   "label": "Family Landholding"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "me_household",
+   "fieldtype": "Float",
+   "label": "How many acres does the ME's household have?"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "irrigation_type",
+   "fieldtype": "Select",
+   "label": "Irrigation Type",
+   "options": "\nIrrigated\nRain Fed\nBoth"
+  },
+  {
+   "fieldname": "household_income_section",
+   "fieldtype": "Section Break",
+   "label": "Household Income"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "earning_members",
+   "fieldtype": "Select",
+   "label": "No of Earning Members in the family ",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "annual_farm_income",
+   "fieldtype": "Data",
+   "label": "Annual Family Farm Income (In INR)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "annual_other_income",
+   "fieldtype": "Data",
+   "label": "Annual Family Other Income (In INR)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "family_income_dependency",
+   "fieldtype": "Data",
+   "label": "Family Income dependency"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_cattle",
+   "fieldtype": "Data",
+   "label": "No of Cattle "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cattle_details",
+   "fieldtype": "Data",
+   "label": "Cattle Details Other"
+  },
+  {
+   "bold": 1,
+   "fieldname": "behaviors_traits_section",
+   "fieldtype": "Section Break",
+   "label": "Behaviors Traits"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "needy_for_work",
+   "fieldtype": "Select",
+   "label": "Needy for work",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "hardwork",
+   "fieldtype": "Rating",
+   "label": "Hardwork"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "communication",
+   "fieldtype": "Rating",
+   "label": "Communication"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "understanding_of_work",
+   "fieldtype": "Rating",
+   "label": "Understanding of Work"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "behavior_with_group",
+   "fieldtype": "Rating",
+   "label": "Behavior with Group"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "me_committed_s4s",
+   "fieldtype": "Select",
+   "label": "Is the ME committed to S4S work ",
+   "options": "\nFull Time\nPart Time"
+  },
+  {
+   "fieldname": "infrastructure_requirement_section",
+   "fieldtype": "Section Break",
+   "label": "Infrastructure Requirement"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "space",
+   "fieldtype": "Data",
+   "label": "Space (In Sqft)"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "site_located_at",
+   "fieldtype": "Select",
+   "label": "Site Located At",
+   "options": "\nTerrace\nHome\nFarm\nRented"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "accessibility_me_full_time",
+   "fieldtype": "Check",
+   "label": "Accessibility of ME to the site full time"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "accessibility_me_part_time",
+   "fieldtype": "Check",
+   "label": "Accessibility of ME to the site  part time"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "distance_from_site",
+   "fieldtype": "Data",
+   "label": "Distance from Site"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "space_rating_hygiene",
+   "fieldtype": "Rating",
+   "label": "Space Rating-Hygiene"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "space_rating_safety",
+   "fieldtype": "Rating",
+   "label": "Space Rating-Safety"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "space_rating_neighbor",
+   "fieldtype": "Rating",
+   "label": "Space Rating-Neighbor"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "flooring",
+   "fieldtype": "Select",
+   "label": "Flooring",
+   "options": "\nConcrete\nTilled\nSoil"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "electricity_type",
+   "fieldtype": "Select",
+   "label": "Electricity Type",
+   "options": "\nSingle Phase\nThree Phase"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "electricity_meter",
+   "fieldtype": "Select",
+   "label": "Electricity Meter",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "electricity_load",
+   "fieldtype": "Data",
+   "label": "Electricity Load"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "electricity_power_cut",
+   "fieldtype": "Select",
+   "label": "Electricity Power Cut",
+   "options": "\nFrequent\nOnce a week\nOnce a day\nTwice a day"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "electricity_remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "water_source",
+   "fieldtype": "Select",
+   "label": "Water Source",
+   "options": "\nTapwater\nBorewell\nWell\nAll"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "water_availability",
+   "fieldtype": "Select",
+   "label": "Water Availability",
+   "options": "\nYes\nNo\nPart time\n24*7"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "storage_availability",
+   "fieldtype": "Select",
+   "label": "Storage Availability",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "road_connectivity",
+   "fieldtype": "Select",
+   "label": "Transportation Road Connectivity",
+   "options": "\nYes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "unloading_rm",
+   "fieldtype": "Select",
+   "label": "Unloading Raw Material",
+   "options": "\nDirect to site\nVia Stairs\nWalking Distance"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "hamal_availability",
+   "fieldtype": "Data",
+   "label": "Hamal Availability"
+  },
+  {
+   "fieldname": "documentation_section",
+   "fieldtype": "Section Break",
+   "label": "ME Documentation"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aadhar_card",
+   "fieldtype": "Attach Image",
+   "label": "Aadhar Card"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pan_card",
+   "fieldtype": "Attach Image",
+   "label": "PAN Card"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address_proof",
+   "fieldtype": "Attach Image",
+   "label": "Address Proof"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "others",
+   "fieldtype": "Attach Image",
+   "label": "Others"
+  },
+  {
+   "fieldname": "declaration_section",
+   "fieldtype": "Section Break",
+   "label": "Declaration "
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "communicated_me",
+   "fieldtype": "Check",
+   "label": "I declare that I have communicated to ME about"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "dcm_work",
+   "fieldtype": "Check",
+   "label": "DCM Work"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "bank_loan",
+   "fieldtype": "Check",
+   "label": "Bank Loan"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "earning_potential",
+   "fieldtype": "Check",
+   "label": "Earning Potential"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "company_requirements",
+   "fieldtype": "Check",
+   "label": "Company requirements "
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "legal",
+   "fieldtype": "Check",
+   "label": "Legal"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "ethics",
+   "fieldtype": "Check",
+   "label": "Ethics"
+  },
+  {
+   "fieldname": "recommendation_section",
+   "fieldtype": "Section Break",
+   "label": "Recommendation"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "me_willing_work",
+   "fieldtype": "Rating",
+   "label": "ME is willing to work"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "family_willing_support",
+   "fieldtype": "Rating",
+   "label": "Family is willing to support"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "banking_willingness",
+   "fieldtype": "Data",
+   "label": "Banking Willingness"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "recommend_me",
+   "fieldtype": "Data",
+   "label": "Do You Recommend the ME "
+  },
+  {
+   "fieldname": "remark_2",
+   "fieldtype": "Small Text",
+   "label": "Remark "
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_75",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_85",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_93",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_101",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "me_lead",
+   "fieldtype": "Link",
+   "label": "ME Lead",
+   "options": "ME Lead"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aadhar_card_no",
+   "fieldtype": "Data",
+   "label": "Aadhar Card No"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pan_card_no",
+   "fieldtype": "Data",
+   "label": "PAN Card No"
+  },
+  {
+   "fieldname": "crops_grown_section",
+   "fieldtype": "Section Break",
+   "label": "Crops Grown by the household"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "soybean",
+   "fieldtype": "Check",
+   "label": "Soybean"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "wheat",
+   "fieldtype": "Check",
+   "label": "Wheat"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "maize",
+   "fieldtype": "Check",
+   "label": "Maize"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "ginger",
+   "fieldtype": "Check",
+   "label": "Ginger"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "tomato",
+   "fieldtype": "Check",
+   "label": "Tomato"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "moong",
+   "fieldtype": "Check",
+   "label": "Moong"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "onion",
+   "fieldtype": "Check",
+   "label": "Onion"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "tur",
+   "fieldtype": "Check",
+   "label": "Tur"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "bajra",
+   "fieldtype": "Check",
+   "label": "Bajra"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "cotton",
+   "fieldtype": "Check",
+   "label": "Cotton"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "cow",
+   "fieldtype": "Check",
+   "label": "Cow"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "buffalo",
+   "fieldtype": "Check",
+   "label": "Buffalo"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "goat",
+   "fieldtype": "Check",
+   "label": "Goat"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bank_passbook",
+   "fieldtype": "Attach Image",
+   "label": "Bank Passbook"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ration_card",
+   "fieldtype": "Attach Image",
+   "label": "Ration Card"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "voters_id",
+   "fieldtype": "Attach Image",
+   "label": "Voters ID"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "light_bill",
+   "fieldtype": "Attach Image",
+   "label": "Light Bill"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "lead_qualification_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead Qualification Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lead Qualification Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "caste",
+   "fieldtype": "Data",
+   "label": "Caste"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nOpen\nOBC\nSC\nST"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "lead_approval_status",
+   "fieldtype": "Select",
+   "label": "Lead Approval Status",
+   "options": "\nApproved by Qualifier\nRejected by Qualifier\nQualify\nReject\nRework"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-13 14:28:57.162383",
+ "modified_by": "Administrator",
+ "module": "S4S",
+ "name": "Lead Qualification Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

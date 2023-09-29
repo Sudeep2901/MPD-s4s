@@ -1,0 +1,334 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-30 14:10:12.359039",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "column_break_3",
+  "date",
+  "company",
+  "abbr",
+  "product_name",
+  "rm_storage_area_section",
+  "rm_storage",
+  "area_is_clean",
+  "free_from_dust",
+  "column_break_10",
+  "remark",
+  "remark_1",
+  "remark_2",
+  "attach_photo",
+  "fg_storage_section",
+  "free_from_insects",
+  "column_break_17",
+  "remark_4",
+  "attach_photo_4",
+  "hardware_section",
+  "fbd_clean",
+  "cutter_clean",
+  "scd_clean",
+  "column_break_21",
+  "remark_5",
+  "remark_6",
+  "remark_7",
+  "attach_photo_1",
+  "personal_hygiene_section",
+  "wear_apareon",
+  "wear_hair_cap",
+  "dcm_clean",
+  "water_storage",
+  "washing_area",
+  "column_break_31",
+  "remark_8",
+  "remark_9",
+  "remark_10",
+  "remark_11",
+  "remark_12",
+  "attach_photo_2",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DCM QC.-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "DCM Name",
+   "options": "DCM List"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "label": "Product Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DCM Daily Checklist",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "rm_storage_area_section",
+   "fieldtype": "Section Break",
+   "label": "RM Storage Area"
+  },
+  {
+   "fieldname": "rm_storage",
+   "fieldtype": "Select",
+   "label": "Raw Material is stored on pallets or Tarpaulin sheets",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "area_is_clean",
+   "fieldtype": "Select",
+   "label": "Area is clean, free from insects and other materials",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "free_from_dust",
+   "fieldtype": "Select",
+   "label": "All Raw materials are free from dust, damages, insects\u2026etc",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "fg_storage_section",
+   "fieldtype": "Section Break",
+   "label": "FG and PM Storage \u200b"
+  },
+  {
+   "fieldname": "free_from_insects",
+   "fieldtype": "Select",
+   "label": "Area clean, free from insects and other material",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "hardware_section",
+   "fieldtype": "Section Break",
+   "label": "Hardware"
+  },
+  {
+   "fieldname": "fbd_clean",
+   "fieldtype": "Select",
+   "label": "FBD are clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "cutter_clean",
+   "fieldtype": "Select",
+   "label": "Cutter are clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "scd_clean",
+   "fieldtype": "Select",
+   "label": "SCD are clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "personal_hygiene_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Hygiene"
+  },
+  {
+   "fieldname": "wear_apareon",
+   "fieldtype": "Select",
+   "label": "Wear the apareon",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "wear_hair_cap",
+   "fieldtype": "Select",
+   "label": "Wear the hair cap",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "dcm_clean",
+   "fieldtype": "Select",
+   "label": "DCM area is clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "water_storage",
+   "fieldtype": "Select",
+   "label": "Water storage is clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "washing_area",
+   "fieldtype": "Select",
+   "label": "Washing area is clean",
+   "options": "\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_1",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_2",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark_4",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark_5",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_6",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_7",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark_8",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_9",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_10",
+   "fieldtype": "Data",
+   "label": "Remark "
+  },
+  {
+   "fieldname": "remark_11",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark_12",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "attach_photo",
+   "fieldtype": "Attach Image",
+   "label": "Attach Photo"
+  },
+  {
+   "fieldname": "attach_photo_1",
+   "fieldtype": "Attach Image",
+   "label": "Attach Photo"
+  },
+  {
+   "fieldname": "attach_photo_2",
+   "fieldtype": "Attach Image",
+   "label": "Attach Photo"
+  },
+  {
+   "fieldname": "attach_photo_4",
+   "fieldtype": "Attach Image",
+   "label": "Attach Photo"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "dcm_name.location",
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-20 15:04:34.041609",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "DCM Daily Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

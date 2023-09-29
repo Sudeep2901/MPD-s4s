@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TAP.#####",
+ "creation": "2023-07-03 12:42:15.279252",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_date",
+  "column_break_eltq9",
+  "to_date",
+  "section_break_ov8e4",
+  "company",
+  "column_break_dprcd",
+  "cc_name",
+  "section_break_sfbwc",
+  "get_entries",
+  "approval_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Datetime",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_eltq9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Datetime",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_break_ov8e4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "label": "CC Name",
+   "options": "S4S CC List"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.docstatus == 0",
+   "fieldname": "get_entries",
+   "fieldtype": "Button",
+   "label": "Get Entries"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "approval_details",
+   "fieldtype": "Table",
+   "label": "Transaction Details",
+   "options": "S4S Transaction Payment Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "S4S Transaction Payment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_dprcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sfbwc",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-07 09:58:50.792616",
+ "modified_by": "Administrator",
+ "module": "S4S CC",
+ "name": "S4S Transaction Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

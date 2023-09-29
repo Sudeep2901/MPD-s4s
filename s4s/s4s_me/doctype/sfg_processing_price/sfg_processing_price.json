@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-04 13:12:43.146880",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sfg_processing_batch_item",
+  "sfg_processing_batch_rate",
+  "column_break_3",
+  "sfg_pricessing_electricity_item",
+  "sfg_processing_electricity_rate",
+  "cluster"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "cluster",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cluster",
+   "options": "S4S Cluster",
+   "reqd": 1
+  },
+  {
+   "default": "SFG Processing Batch Rate",
+   "fieldname": "sfg_processing_batch_item",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "SFG Processing Batch Item",
+   "options": "Item"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sfg_processing_batch_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "SFG Processing Batch Rate",
+   "reqd": 1
+  },
+  {
+   "default": "SFG Processing Electricity Rate",
+   "fieldname": "sfg_pricessing_electricity_item",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "SFG Pricessing Electricity Item",
+   "options": "Item"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sfg_processing_electricity_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "SFG Processing Electricity Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-04 15:33:39.500956",
+ "modified_by": "Administrator",
+ "module": "S4S ME",
+ "name": "SFG Processing Price",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

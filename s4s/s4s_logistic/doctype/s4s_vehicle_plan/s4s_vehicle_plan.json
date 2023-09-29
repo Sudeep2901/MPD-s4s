@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-25 15:27:40.210250",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "tansactions",
+  "column_break_5ee6r",
+  "company",
+  "cc_name",
+  "vlcc_name",
+  "section_break_4",
+  "vehicle_assignment",
+  "farm_pickups_section",
+  "farm_pickups",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "VP-."
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Assignment"
+  },
+  {
+   "fieldname": "vehicle_assignment",
+   "fieldtype": "Table",
+   "label": "Vehicle Assignment",
+   "options": "S4S Vehicle Assignment"
+  },
+  {
+   "depends_on": "eval:doc.date && doc.docstatus == 0",
+   "fieldname": "tansactions",
+   "fieldtype": "HTML",
+   "label": "Tansactions",
+   "options": "<div class=\"text-left\" id=\"form-step-footer\">\n    <button class=\"btn btn-primary btn-pt btn-sm ml-2\">\n        Get Purchase Transactions\n    </button>\n    <button class=\"btn btn-primary btn-fp btn-sm ml-2\">\n        Get Farm Pickups\n    </button>\n</div>"
+  },
+  {
+   "fieldname": "farm_pickups_section",
+   "fieldtype": "Section Break",
+   "label": "Farm Pickups"
+  },
+  {
+   "fieldname": "farm_pickups",
+   "fieldtype": "Table",
+   "label": "Farm Pickups",
+   "options": "S4S Vehicle Assignment for Farmer Query"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "S4S Vehicle Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5ee6r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "label": "CC Name",
+   "options": "S4S CC List"
+  },
+  {
+   "depends_on": "eval:doc.cc_name",
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "label": "VLCC Name",
+   "options": "S4S VLCC List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-08 14:13:45.290158",
+ "modified_by": "Administrator",
+ "module": "S4S Logistic",
+ "name": "S4S Vehicle Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

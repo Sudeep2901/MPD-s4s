@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-19 16:50:04.612151",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wip_item",
+  "wastage_item",
+  "sfg_item",
+  "sfg_bom"
+ ],
+ "fields": [
+  {
+   "fieldname": "wip_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "WIP Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "wastage_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wastage Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "sfg_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SFG Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "sfg_bom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SFG BOM",
+   "options": "BOM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-26 12:08:16.629014",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "DCM Item Mapping",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

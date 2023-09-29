@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-12-08 17:01:51.414313",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "column_break_3",
+  "request_date",
+  "target_date",
+  "company",
+  "abbr",
+  "raise_issue_list_section",
+  "cutter_blade",
+  "cutter_belt",
+  "cutter_motor",
+  "cutter_shaft",
+  "cutter_other",
+  "fbd_fan",
+  "fbd_other",
+  "column_break_11",
+  "electrical_board",
+  "electrical_other",
+  "scd_other",
+  "other",
+  "photo",
+  "audio_feedback",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "MI RE-",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "label": "Target Date"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "label": "DCM Name",
+   "options": "DCM List"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "raise_issue_list_section",
+   "fieldtype": "Section Break",
+   "label": "Raise Issue List"
+  },
+  {
+   "default": "0",
+   "fieldname": "cutter_blade",
+   "fieldtype": "Check",
+   "label": "Cutter: Blade"
+  },
+  {
+   "default": "0",
+   "fieldname": "cutter_belt",
+   "fieldtype": "Check",
+   "label": "Cutter: Belt"
+  },
+  {
+   "default": "0",
+   "fieldname": "cutter_motor",
+   "fieldtype": "Check",
+   "label": "Cutter: Motor"
+  },
+  {
+   "default": "0",
+   "fieldname": "cutter_shaft",
+   "fieldtype": "Check",
+   "label": "Cutter: Shaft"
+  },
+  {
+   "fieldname": "cutter_other",
+   "fieldtype": "Data",
+   "label": "Cutter Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "fbd_fan",
+   "fieldtype": "Check",
+   "label": "FBD: FAN"
+  },
+  {
+   "default": "0",
+   "fieldname": "electrical_board",
+   "fieldtype": "Check",
+   "label": "Electrical: Board"
+  },
+  {
+   "default": "0",
+   "fieldname": "electrical_other",
+   "fieldtype": "Check",
+   "label": "Electrical Other"
+  },
+  {
+   "fieldname": "fbd_other",
+   "fieldtype": "Data",
+   "label": "FBD Other"
+  },
+  {
+   "fieldname": "scd_other",
+   "fieldtype": "Data",
+   "label": "SCD Other"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "audio_feedback",
+   "fieldtype": "Attach",
+   "label": "Audio Feedback"
+  },
+  {
+   "fetch_from": "dcm_name.location",
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-20 15:12:24.975706",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "Maintenance Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

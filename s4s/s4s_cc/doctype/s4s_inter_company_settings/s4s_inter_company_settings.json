@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 14:16:32.587744",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inter_company_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "inter_company_details",
+   "fieldtype": "Table",
+   "label": "Inter Company Details",
+   "options": "S4S Inter Company Settings Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-05 14:16:32.587744",
+ "modified_by": "Administrator",
+ "module": "S4S CC",
+ "name": "S4S Inter Company Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-12-08 16:41:31.250450",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "dcm_name",
+  "dcm_location",
+  "column_break_3",
+  "request_date",
+  "required_date",
+  "company",
+  "abbr",
+  "hardware_warehouse",
+  "requested_hardware_section",
+  "blade",
+  "disc",
+  "nutbolt",
+  "column_break_11",
+  "whole",
+  "other",
+  "photo",
+  "audio",
+  "ruested_hardware_fan_section",
+  "fan",
+  "whole_1",
+  "column_break_17",
+  "net",
+  "other_2",
+  "requested_hardware_scd_section",
+  "upper_body",
+  "lower_body",
+  "column_break_23",
+  "pc_frame",
+  "pu_tray",
+  "whole_2",
+  "other_3",
+  "requested_hardware_electrical_section",
+  "board",
+  "button",
+  "column_break_31",
+  "wire",
+  "other_4",
+  "reason_change_section",
+  "reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MR HR-"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "DCM Name",
+   "options": "DCM List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_hardware_section",
+   "fieldtype": "Section Break",
+   "label": "Requested Hardware Cutter"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Hardware Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "blade",
+   "fieldtype": "Check",
+   "label": "Blade"
+  },
+  {
+   "default": "0",
+   "fieldname": "disc",
+   "fieldtype": "Check",
+   "label": "Disc"
+  },
+  {
+   "default": "0",
+   "fieldname": "nutbolt",
+   "fieldtype": "Check",
+   "label": "Nutbolt"
+  },
+  {
+   "default": "0",
+   "fieldname": "whole",
+   "fieldtype": "Check",
+   "label": "Whole"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "fan",
+   "fieldtype": "Check",
+   "label": "Fan"
+  },
+  {
+   "default": "0",
+   "fieldname": "whole_1",
+   "fieldtype": "Check",
+   "label": "Whole"
+  },
+  {
+   "default": "0",
+   "fieldname": "net",
+   "fieldtype": "Check",
+   "label": "Net"
+  },
+  {
+   "default": "0",
+   "fieldname": "upper_body",
+   "fieldtype": "Check",
+   "label": "Upper body"
+  },
+  {
+   "default": "0",
+   "fieldname": "lower_body",
+   "fieldtype": "Check",
+   "label": "lower body"
+  },
+  {
+   "default": "0",
+   "fieldname": "pc_frame",
+   "fieldtype": "Check",
+   "label": "PC frame"
+  },
+  {
+   "default": "0",
+   "fieldname": "pu_tray",
+   "fieldtype": "Check",
+   "label": "PU tray"
+  },
+  {
+   "default": "0",
+   "fieldname": "whole_2",
+   "fieldtype": "Check",
+   "label": "Whole"
+  },
+  {
+   "fieldname": "other_3",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "board",
+   "fieldtype": "Check",
+   "label": "Board"
+  },
+  {
+   "default": "0",
+   "fieldname": "button",
+   "fieldtype": "Check",
+   "label": "Button"
+  },
+  {
+   "default": "0",
+   "fieldname": "wire",
+   "fieldtype": "Check",
+   "label": "Wire"
+  },
+  {
+   "fieldname": "other_4",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "reason_change_section",
+   "fieldtype": "Section Break",
+   "label": "Reason to change"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "ruested_hardware_fan_section",
+   "fieldtype": "Section Break",
+   "label": "Ruested Hardware Fan"
+  },
+  {
+   "fieldname": "requested_hardware_scd_section",
+   "fieldtype": "Section Break",
+   "label": "Requested Hardware SCD"
+  },
+  {
+   "fieldname": "requested_hardware_electrical_section",
+   "fieldtype": "Section Break",
+   "label": "Requested Hardware Electrical"
+  },
+  {
+   "fieldname": "other_2",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "label": "Required Date"
+  },
+  {
+   "fieldname": "hardware_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Hardware Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "audio",
+   "fieldtype": "Attach",
+   "label": "Audio Feedback"
+  },
+  {
+   "fetch_from": "dcm_name.location",
+   "fieldname": "dcm_location",
+   "fieldtype": "Data",
+   "label": "DCM Location"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-20 15:13:52.870046",
+ "modified_by": "Administrator",
+ "module": "S4S DCM",
+ "name": "Hardware Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

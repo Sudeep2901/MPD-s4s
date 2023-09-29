@@ -1,0 +1,306 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-13 10:32:43.462097",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "supplier",
+  "supplier_name",
+  "item_code",
+  "item_name",
+  "variety",
+  "moisture",
+  "rate",
+  "product_photo",
+  "delivery_location",
+  "tentative_qty",
+  "sample_given",
+  "query_generate_location",
+  "column_break_4",
+  "status",
+  "date",
+  "mobile_no",
+  "vlcc_name",
+  "cc_name",
+  "village",
+  "taluka",
+  "district",
+  "state",
+  "pickup_request",
+  "comment",
+  "section_break_20",
+  "s4s_purchase",
+  "transaction_add",
+  "transporter_details_section",
+  "vehicle_no",
+  "vehicle_model",
+  "column_break_28",
+  "driver_name",
+  "driver_mobile_number",
+  "assigned_vehicle",
+  "company",
+  "abbr"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series (\u092e\u093e\u0932\u093f\u0915\u093e)",
+   "options": "QU-.YY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer (\u0936\u0947\u0924\u0915\u0930\u0940)",
+   "options": "S4S Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Farmer Name (\u0936\u0947\u0924\u0915\u0931\u094d\u092f\u093e\u091a\u0947 \u0928\u093e\u0935)"
+  },
+  {
+   "fieldname": "variety",
+   "fieldtype": "Data",
+   "label": "Variety (\u0935\u093f\u0935\u093f\u0927\u0924\u093e)"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "label": "Moisture (\u0913\u0932\u093e\u0935\u093e)"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate Offered (\u0911\u092b\u0930 \u0915\u0947\u0932\u0947\u0932\u0947 \u0926\u0930)"
+  },
+  {
+   "fieldname": "product_photo",
+   "fieldtype": "Attach Image",
+   "label": "Product Photo (\u0909\u0924\u094d\u092a\u093e\u0926\u0928 \u092b\u094b\u091f\u094b)"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment (\u091f\u093f\u092a\u094d\u092a\u0923\u0940)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Query Date (\u091a\u094c\u0915\u0936\u0940 \u0924\u093e\u0930\u0940\u0916)",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Select",
+   "label": "Delivery Location (\u0935\u093f\u0924\u0930\u0923 \u0938\u094d\u0925\u093e\u0928)",
+   "options": "\nAt VLCC\nAt CC\nFarm Pick up"
+  },
+  {
+   "fieldname": "sample_given",
+   "fieldtype": "Select",
+   "label": "Sample Given (\u0928\u092e\u0941\u0928\u093e \u0926\u093f\u0932\u093e)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No (\u092e\u094b\u092c\u093e\u0908\u0932 \u0915\u094d\u0930)"
+  },
+  {
+   "fieldname": "vlcc_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "VLCC Name (VLCC \u0928\u093e\u0935)",
+   "mandatory_depends_on": "eval:doc.query_generate_location == \"At VLCC\"",
+   "options": "S4S VLCC List"
+  },
+  {
+   "fieldname": "cc_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CC Name (CC \u0928\u093e\u0935)",
+   "options": "S4S CC List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village (\u0917\u093e\u0935)",
+   "options": "S4S Village List"
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka (\u0924\u093e\u0932\u0941\u0915\u093e)",
+   "options": "S4S Taluka List"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District (\u091c\u093f\u0932\u094d\u0939\u093e)",
+   "options": "S4S District List"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal && !doc.s4s_purchase",
+   "fieldname": "transaction_add",
+   "fieldtype": "HTML",
+   "options": "<div style=\"text-align: right;\">\n<button class=\"btn btn-default ellipsis btn-primary\" id=\"add_transaction\">Add Transaction\n</button></div>"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Product Name (\u0909\u0924\u094d\u092a\u093e\u0926\u0928\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "s4s_purchase",
+   "fieldtype": "Link",
+   "label": "S4S Purchase (S4S \u0916\u0930\u0947\u0926\u0940)",
+   "options": "S4S Purchase"
+  },
+  {
+   "depends_on": "eval:doc.delivery_location == 'Farm Pick up'",
+   "fieldname": "tentative_qty",
+   "fieldtype": "Int",
+   "label": "Tentative Qty for Pickup (\u092a\u093f\u0915\u0905\u092a\u0938\u093e\u0920\u0940 \u0924\u093e\u0924\u094d\u092a\u0941\u0930\u0924\u0940 \u0938\u0902\u0916\u094d\u092f\u093e)"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('CC User') == 1",
+   "fieldname": "pickup_request",
+   "fieldtype": "Select",
+   "label": "Pickup Request (\u092a\u093f\u0915\u0905\u092a \u0935\u093f\u0928\u0902\u0924\u0940)",
+   "options": "\nArrange Vehicle\nNot Arrange Vehicle"
+  },
+  {
+   "fieldname": "transporter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transporter Details (\u091f\u094d\u0930\u093e\u0928\u094d\u0938\u092a\u094b\u0930\u094d\u091f\u0930 \u0924\u092a\u0936\u0940\u0932)"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No (\u0935\u093e\u0939\u0928 \u0915\u094d\u0930)",
+   "options": "S4S Vehicle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name (\u091a\u093e\u0932\u0915\u093e\u091a\u0947 \u0928\u093e\u0935)",
+   "read_only": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "assigned_vehicle",
+   "fieldtype": "Select",
+   "label": "Assigned Vehicle Status (\u0928\u093f\u092f\u0941\u0915\u094d\u0924 \u0935\u093e\u0939\u0928 \u0938\u094d\u0925\u093f\u0924\u0940)",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State (\u0930\u093e\u091c\u094d\u092f)",
+   "options": "S4S State"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status (\u0938\u094d\u0925\u093f\u0924\u0940)",
+   "options": "Active\nInactive\nCompleted\nPending"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company (\u0915\u0902\u092a\u0928\u0940)",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr"
+  },
+  {
+   "fetch_from": "vehicle_no.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_no.driver_mobile_number",
+   "fieldname": "driver_mobile_number",
+   "fieldtype": "Data",
+   "label": "Driver Mobile Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "query_generate_location",
+   "fieldtype": "Select",
+   "label": "Query Generate Location(\u091a\u094c\u0915\u0936\u0940 \u0928\u093f\u0930\u094d\u092e\u093f\u0924\u0940 \u0938\u094d\u0925\u093e\u0928)",
+   "options": "\nAt VLCC\nAt CC",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-28 09:31:51.059982",
+ "modified_by": "Administrator",
+ "module": "S4S VLCC",
+ "name": "S4S Farmer Query",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
